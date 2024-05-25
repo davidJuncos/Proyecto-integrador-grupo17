@@ -20,11 +20,17 @@ Algoritmo sin_titulo
 					Segun menu1 Hacer
 					  1:
 						Escribir "Ingrese DNI"
-						Leer DNI
+						Leer dni
 						Escribir "Ingrese el nombre del cliente"
-						Leer Nombre
+						Leer nombre
 						Escribir "Ingrese el apellido del cliente"
 						Leer apellido
+						Escribir "Ingrese el e-mail del cliente"
+						Leer email
+						Escribir "Ingrese el numero de telefono del cliente"
+						Leer num
+						Escribir "Ingrese la dirección del cliente"
+						Leer direccion
 					   2:
 				   Fin Segun
 				Hasta Que menu1 == 4
