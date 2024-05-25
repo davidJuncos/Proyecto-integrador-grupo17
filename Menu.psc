@@ -4,8 +4,8 @@ Algoritmo sin_titulo
 		Escribir "1-CRUD-Clientes"
 		Escribir "2-CRUD-Personal"
 		Escribir "3-CRUD-Reservas"
-		Escribir "4-CRUD-Habitación"
-		Escribir "4- salir"
+		Escribir "4-CRUD-Habitaciï¿½n"
+		Escribir "4-Salir"
 		leer menu
 		
 		
@@ -15,7 +15,7 @@ Algoritmo sin_titulo
 					Escribir "1-Agregar cliente"
 					Escribir "2-Modicar cliente"
 					Escribir "3-Eliminar cliente"
-					Escribir "4- salir"
+					Escribir "4-Salir"
 					leer menu1
 					Segun menu1 Hacer
 					  1:
