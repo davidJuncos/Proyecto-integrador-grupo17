@@ -4,7 +4,7 @@ Algoritmo sin_titulo
 		Escribir "1-CRUD-Clientes"
 		Escribir "2-CRUD-Personal"
 		Escribir "3-CRUD-Reservas"
-		Escribir "4-CRUD-Habitaciï¿½n"
+		Escribir "4-CRUD-Habitacion"
 		Escribir "4-Salir"
 		leer menu
 		
@@ -29,7 +29,7 @@ Algoritmo sin_titulo
 						Leer email
 						Escribir "Ingrese el numero de telefono del cliente"
 						Leer num
-						Escribir "Ingrese la dirección del cliente"
+						Escribir "Ingrese la direccion del cliente"
 						Leer direccion
 					   2:
 				   Fin Segun
