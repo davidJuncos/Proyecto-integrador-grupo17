@@ -1,49 +1,102 @@
-Algoritmo sin_titulo
-	
-	Repetir	
-		Escribir "1-CRUD-Clientes"
-		Escribir "2-CRUD-Personal"
-		Escribir "3-CRUD-Reservas"
-		Escribir "4-CRUD-Habitacion"
-		Escribir "4-Salir"
-		leer menu
-		
-		
-		Segun menu Hacer
-			1:
-				Repetir	
-					Escribir "1-Agregar cliente"
-					Escribir "2-Modicar cliente"
-					Escribir "3-Eliminar cliente"
-					Escribir "4-Salir"
-					leer menu1
-					Segun menu1 Hacer
-					  1:
-						Escribir "Ingrese DNI"
-						Leer dni
-						Escribir "Ingrese el nombre del cliente"
-						Leer nombre
-						Escribir "Ingrese el apellido del cliente"
-						Leer apellido
-						Escribir "Ingrese el e-mail del cliente"
-						Leer email
-						Escribir "Ingrese el numero de telefono del cliente"
-						Leer num
-						Escribir "Ingrese la direccion del cliente"
-						Leer direccion
-					   2:
-				   Fin Segun
-				Hasta Que menu1 == 4
-				
-			2:
+Algoritmo GestionHotelera		
+		Repetir	
+			Escribir "1-CRUD_Clientes"
+			Escribir "2-CRUD_Personal"
+			Escribir "3-CRUD_Reservas"
+			Escribir "4-CRUD_Habitacion"
+			leer menu
 			
-			3:
-				
-			4: 
 			
-				
-				
-		Fin Segun
-	
-	Hasta Que menu == 4
+			Segun menu Hacer
+				1:
+					Repetir	
+						Escribir "1- Agregar cliente"
+						Escribir "2- Modificar cliente"
+						Escribir "3- Eliminar cliente"
+						Escribir "4- Salir"
+						leer menu1
+						Segun menu1 Hacer
+							1:
+								Escribir "Ingrese DNI: "
+								Leer dni
+								Escribir "Ingrese el nombre del cliente: "
+								Leer nombre
+								Escribir "Ingrese el apellido del cliente: "
+								Leer apellido
+								Escribir "Ingrese el e-mail del cliente: "
+								Leer email
+								Escribir "Ingrese el numero de telefono del cliente: "
+								Leer num
+								Escribir "Ingrese la direccion del cliente: "
+								Leer direccion
+							2:
+						Fin Segun
+					Hasta Que menu1 == 4
+				2:
+					Repetir	
+						Escribir "1- Registrar personal"
+						Escribir "2- Modificar datos personal"
+						Escribir "3- Eliminar personal"
+						Escribir "4- Salir"
+						leer menu1
+						Segun menu1 Hacer
+							1:
+								Escribir "Ingrese DNI: "
+								Leer dni1
+								Escribir "Ingrese nombre del empleado: "
+								Leer nombreEmpleado
+								Escribir "Ingrese apellido del empleado: "
+								Leer apellidoEmpleado
+								Escribir "Ingrese horarios a cumplir: "
+								Leer horario
+								Escribir "Ingresar cargo: "
+								Leer rol
+							2:
+						Fin Segun
+					Hasta Que menu1 == 4
+				3:
+					Repetir	
+						Escribir "1- Agregar reserva"
+						Escribir "2- Modificar reserva"
+						Escribir "3- Eliminar reserva"
+						Escribir "4- Salir"
+						leer menu1
+						Segun menu1 Hacer
+							1:
+								Escribir "Ingrese DNI de la persona que realizo la reserva: "
+								Leer dni2
+								Escribir "Ingrese fecha de entrada al hotel: "
+								Leer entrada
+								Escribir "Ingrese fecha de salida del hotel: "
+								Leer salida
+								Escribir "Ingrese estado de la reserva: "
+								Leer estadoReserva
+							2:
+						Fin Segun
+					Hasta Que menu1 == 4
+				4: 
+					Repetir	
+						Escribir "1- Agregar habitación"
+						Escribir "2- Modificar habitación"
+						Escribir "3- Eliminar habitación"
+						Escribir "4- Salir"
+						leer menu1
+						Segun menu1 Hacer
+							1:
+								Escribir "Ingrese numero de habitación: "
+								Leer nroHabitacion
+								Escribir "Ingrese tipo de habitación: "
+								Leer tipoHabitacion
+								Escribir "Ingrese precio por noche: "
+								Leer precioNoche
+								Escribir "Ingrese disponibilidad: "
+								Leer disponibilidad
+							2:
+						Fin Segun
+					Hasta Que menu1 == 4
+					
+					
+			Fin Segun
+			
+		Hasta Que menu == 4
 FinAlgoritmo
