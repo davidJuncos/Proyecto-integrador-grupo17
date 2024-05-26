@@ -10,40 +10,40 @@ Algoritmo GestionHotelera
 			Segun menu Hacer
 				1:
 					Repetir	
-						Escribir "1-Agregar cliente"
-						Escribir "2-Modificar cliente"
-						Escribir "3-Eliminar cliente"
-						Escribir "4-Salir."
+						Escribir "1- Agregar cliente"
+						Escribir "2- Modificar cliente"
+						Escribir "3- Eliminar cliente"
+						Escribir "4- Salir"
 						leer menu1
 						Segun menu1 Hacer
 							1:
-								Escribir "Ingrese DNI"
+								Escribir "Ingrese DNI: "
 								Leer dni
-								Escribir "Ingrese el nombre del cliente"
+								Escribir "Ingrese el nombre del cliente: "
 								Leer nombre
-								Escribir "Ingrese el apellido del cliente"
+								Escribir "Ingrese el apellido del cliente: "
 								Leer apellido
-								Escribir "Ingrese el e-mail del cliente"
+								Escribir "Ingrese el e-mail del cliente: "
 								Leer email
-								Escribir "Ingrese el numero de telefono del cliente"
+								Escribir "Ingrese el numero de telefono del cliente: "
 								Leer num
-								Escribir "Ingrese la direccion del cliente"
+								Escribir "Ingrese la direccion del cliente: "
 								Leer direccion
 							2:
 						Fin Segun
 					Hasta Que menu1 == 4
 				2:
 					Repetir	
-						Escribir "1-Registrar personal"
-						Escribir "2-Modificar datos personal"
-						Escribir "3-Eliminar personal"
-						Escribir "4-Salir."
+						Escribir "1- Registrar personal"
+						Escribir "2- Modificar datos personal"
+						Escribir "3- Eliminar personal"
+						Escribir "4- Salir"
 						leer menu1
 						Segun menu1 Hacer
 							1:
 								Escribir "Ingrese DNI: "
 								Leer dni1
-								Escribir "Ingrese nombre del empleado"
+								Escribir "Ingrese nombre del empleado: "
 								Leer nombreEmpleado
 								Escribir "Ingrese apellido del empleado: "
 								Leer apellidoEmpleado
@@ -56,10 +56,10 @@ Algoritmo GestionHotelera
 					Hasta Que menu1 == 4
 				3:
 					Repetir	
-						Escribir "1-Agregar reserva"
-						Escribir "2-Modificar reserva"
-						Escribir "3-Eliminar reserva"
-						Escribir "4-Salir."
+						Escribir "1- Agregar reserva"
+						Escribir "2- Modificar reserva"
+						Escribir "3- Eliminar reserva"
+						Escribir "4- Salir"
 						leer menu1
 						Segun menu1 Hacer
 							1:
@@ -76,20 +76,20 @@ Algoritmo GestionHotelera
 					Hasta Que menu1 == 4
 				4: 
 					Repetir	
-						Escribir "1-Agregar habitación"
-						Escribir "2-Modificar habitación"
-						Escribir "3-Eliminar habitación"
-						Escribir "4-Salir."
+						Escribir "1- Agregar habitación"
+						Escribir "2- Modificar habitación"
+						Escribir "3- Eliminar habitación"
+						Escribir "4- Salir"
 						leer menu1
 						Segun menu1 Hacer
 							1:
-								Escribir "Ingrese numero de habitación:"
+								Escribir "Ingrese numero de habitación: "
 								Leer nroHabitacion
-								Escribir "Ingrese tipo de habitación"
+								Escribir "Ingrese tipo de habitación: "
 								Leer tipoHabitacion
-								Escribir "Ingrese precio por noche"
+								Escribir "Ingrese precio por noche: "
 								Leer precioNoche
-								Escribir "Ingrese disponibilidad"
+								Escribir "Ingrese disponibilidad: "
 								Leer disponibilidad
 							2:
 						Fin Segun
