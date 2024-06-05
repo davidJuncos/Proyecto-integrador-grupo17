@@ -68,7 +68,7 @@ Algoritmo GestionHotelera
 									Escribir "Ingrese la direccion del cliente "
 									Leer direccion_cliente
 								FinSi
-							2:
+							3:
 								Escribir "Ingrese DNI de la persona que quieres eliminar: "
 								Leer dni
 								Escribir "Desea eliminar : ", nombre_cliente
