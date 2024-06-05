@@ -3,7 +3,10 @@
  <table>
   <tr>
    <th>
-    Nombre
+    NOMBRE
+   </th>
+   <th>
+    APELLIDO
    </th>
    <th>
     DNI
@@ -19,7 +22,10 @@
    </th>
    <tr>
     <td>
-     - John Mackinson
+     John
+    </td>
+    <td>
+     Mackinson
     </td>
     <td>
      DNI: 45.837.754
@@ -36,7 +42,10 @@
    </tr>
   <tr>
     <td>
-     - Tomás Ferrere
+     Tomás
+    </td>
+    <td>
+     Ferrere
     </td>
     <td>
      DNI: 44.762.329
@@ -53,7 +62,10 @@
    </tr>
   <tr>
     <td>
-     - David Eduardo Juncos
+     David Eduardo
+    </td>
+   <td>
+     Juncos
     </td>
     <td>
      DNI: 29686787
@@ -70,7 +82,10 @@
    </tr>
   <tr>
     <td>
-     - Aldana Tissera
+     Aldana
+    </td>
+   <td>
+     Tissera
     </td>
     <td>
      DNI: 29254710
