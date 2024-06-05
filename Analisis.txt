@@ -1,0 +1,85 @@
+ANÁLISIS
+EPS
+
+Entrada
+
+1-CRUD-Clientes, 2-CRUD-Personal, 3-CRUD-Reservas, 4-CRUD-Habitación, 5-Salir.
+
+CRUD Clientes:
+ 1-Agregar cliente, 2-Modificar cliente, 3-Eliminar cliente, 4-Salir.
+
+Datos del cliente: dni, nombre_cliente, apellido_cliente, email_cliente, num_cliente, direccion_cliente.
+
+CRUD Personal:
+ 1-Registrar personal, 2-Modificar datos personal, 3-Eliminar personal, 4-Salir.
+
+Datos del personal: dni1, nombreEmpleado, apellidoEmpleado, horario, rol.
+
+CRUD Reservas:
+1-Agregar reserva, 2-Modificar reserva, 3-Eliminar reserva, 4-Salir.
+
+Datos de la reserva: dni, entrada, salida, estadoReserva.
+
+CRUD Habitación:
+ 1-Agregar habitación, 2-Modificar habitación, 3-Eliminar habitación, 4-Salir.
+
+Datos de la habitación: nroHabitacion, tipoHabitacion, precioNoche, disponibilidad.
+
+
+
+PROCESO
+Según la opción se realiza:
+
+CRUD Clientes:
+Agregar cliente: Leer datos del cliente y guardarlo.
+Modificar cliente: Leer el DNI del cliente, preguntar qué datos se desean modificar y actualizar los datos.
+Eliminar cliente: Leer el DNI del cliente, confirmar la eliminación y eliminar los datos.
+
+CRUD Personal:
+Según la opción, se realiza: 
+Registrar personal: Leer datos del personal y guardarlo.
+Modificar datos personal: Leer el DNI del personal y actualizar los datos.
+Eliminar personal: Leer el DNI del personal y eliminar los datos.
+
+CRUD Reservas:
+Agregar reserva: Leer datos de la reserva y guardarlo.
+Modificar reserva: Leer el DNI de la reserva, preguntar qué datos se desean modificar y actualizar los datos.
+Eliminar reserva: Leer el DNI de la reserva y eliminar los datos.
+
+CRUD Habitación:
+Agregar habitación: Leer datos de la habitación y guardarlo.
+Modificar habitación: Leer el número de habitación y actualizar los datos.
+Eliminar habitación: Leer el número de habitación y eliminar los datos.
+
+
+
+SALIDA
+
+CRUD Clientes:
+Mensajes de confirmación
+Cliente agregado 
+Cliente modificado
+Cliente eliminado 
+Mensajes de error o solicitud de confirmación según corresponda
+
+CRUD Personal:
+Mensajes de confirmación
+Personal registrado con éxito.
+Datos del personal modificados con éxito.
+Personal eliminado con éxito.
+Mensajes de error o solicitud de confirmación según corresponda.
+
+CRUD Reservas:
+Mensajes de confirmación
+Reserva registrada con éxito.
+Datos de la reserva modificado con éxito.
+Reserva eliminada con éxito.
+Mensajes de error o solicitud de confirmación según corresponda.
+
+CRUD Habitacion:
+Mensajes de confirmación:
+Habitación agregada con éxito.
+Habitación modificada con éxito.
+Habitación eliminada con éxito.
+Mensajes de error o solicitud de confirmación según corresponda.
+

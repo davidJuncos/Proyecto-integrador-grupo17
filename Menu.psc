@@ -1,5 +1,6 @@
 Algoritmo GestionHotelera		
 	//Falta diccionario para que funcione correctamente.
+	
 		Repetir	
 			Escribir "1-CRUD-Clientes"
 			Escribir "2-CRUD-Personal"
