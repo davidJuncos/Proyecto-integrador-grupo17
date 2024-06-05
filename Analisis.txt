@@ -2,6 +2,8 @@ ANÁLISIS. ENTRADA PROCESO SALIDA.
 
 ENTRADA
 
+Las entradas en un sistema de información de hotel incluyen todos los datos y la información que se introducen en el sistema para su procesamiento.
+
 1-CRUD-Clientes, 2-CRUD-Personal, 3-CRUD-Reservas, 4-CRUD-Habitación, 5-Salir.
 
 CRUD Clientes:
@@ -27,6 +29,8 @@ Datos de la habitación: nroHabitacion, tipoHabitacion, precioNoche, disponibili
 
 
 PROCESO
+
+El proceso implica la manipulación y gestión de los datos introducidos para producir resultados significativos y útiles.
 
 Según la opción se realiza:
 
@@ -54,6 +58,8 @@ Eliminar habitación: Leer el número de habitación y eliminar los datos.
 
 
 SALIDA
+
+Las salidas son los resultados generados por el sistema de información que proporcionan valor y utilidad a los usuarios del sistema.
 
 CRUD Clientes.
 Mensajes de confirmación:
