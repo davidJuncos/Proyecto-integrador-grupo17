@@ -35,6 +35,23 @@
      Repositorio: https://github.com/johnmack10/repo_personal
     </td>
    </tr>
+  <tr>
+    <td>
+     - Tomás Ferrere
+    </td>
+    <td>
+     DNI: 44.762.329
+    </td>
+    <td>
+     Email: ferreretomas07@gmail.com
+    </td>
+    <td>
+     Github: https://github.com/ttomy14
+    </td>
+    <td>
+     Repositorio: https://github.com/ttomy14/Repositorio_Personal
+    </td>
+   </tr>
   </tr>
  </table>
 
@@ -42,13 +59,6 @@
  
  
  
-
-- Tomás Ferrere
- DNI: 44.762.329
- Email: ferreretomas07@gmail.com
- Github: https://github.com/ttomy14
- Repositorio: https://github.com/ttomy14/Repositorio_Personal
-
 - David Eduardo Juncos
  DNI:29686787
  Email: davidjuncos@hotmail.com
