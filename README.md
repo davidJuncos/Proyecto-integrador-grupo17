@@ -6,6 +6,18 @@
    <th>
     Nombre
    </th>
+   <th>
+    DNI
+   </th>
+   <th>
+    EMAIL
+   </th>
+   <th>
+    REPOCITORIO GIT
+   </th>
+   <th>
+    REPOCITORIO PERSONAL
+   </th>
   </tr>
  </table>
 - John Mackinson
