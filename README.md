@@ -1,7 +1,7 @@
 # Proyecto-integrador-grupo3
  INTEGRANTES:
 <style>
- table,tr,th{
+ table,th,td{
   border: 1px solid black;
  }
 </style>
