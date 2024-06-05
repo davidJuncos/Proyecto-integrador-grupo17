@@ -37,7 +37,7 @@
       https://github.com/johnmack10
     </td>
     <td>
-     Repositorio: https://github.com/johnmack10/repo_personal
+      https://github.com/johnmack10/repo_personal
     </td>
    </tr>
   <tr>
@@ -54,10 +54,10 @@
      ferreretomas07@gmail.com
     </td>
     <td>
-     Github: https://github.com/ttomy14
+      https://github.com/ttomy14
     </td>
     <td>
-     Repositorio: https://github.com/ttomy14/Repositorio_Personal
+      https://github.com/ttomy14/Repositorio_Personal
     </td>
    </tr>
   <tr>
@@ -74,10 +74,10 @@
      davidjuncos@hotmail.com
     </td>
     <td>
-     Github: https://github.com/davidJuncos
+      https://github.com/davidJuncos
     </td>
     <td>
-     Repositorio: https://github.com/davidJuncos/Personal-ISPC-Evidencia2
+      https://github.com/davidJuncos/Personal-ISPC-Evidencia2
     </td>
    </tr>
   <tr>
@@ -94,10 +94,10 @@
      aldanatissera54@gmail.com
     </td>
     <td>
-     Github: https://github.com/Aldana1948
+      https://github.com/Aldana1948
     </td>
     <td>
-     Repositorio : https://github.com/Aldana1948/repositorio-personal
+      https://github.com/Aldana1948/repositorio-personal
     </td>
    </tr>
   </tr>
