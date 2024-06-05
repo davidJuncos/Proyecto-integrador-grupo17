@@ -1,7 +1,6 @@
-ANÁLISIS
-EPS
+ANÁLISIS. ENTRADA PROCESO SALIDA.
 
-Entrada
+ENTRADA
 
 1-CRUD-Clientes, 2-CRUD-Personal, 3-CRUD-Reservas, 4-CRUD-Habitación, 5-Salir.
 
@@ -28,26 +27,27 @@ Datos de la habitación: nroHabitacion, tipoHabitacion, precioNoche, disponibili
 
 
 PROCESO
+
 Según la opción se realiza:
 
 CRUD Clientes:
-Agregar cliente: Leer datos del cliente y guardarlo.
-Modificar cliente: Leer el DNI del cliente, preguntar qué datos se desean modificar y actualizar los datos.
+Agregar cliente: Leer datos del cliente y guardarlos.
+Modificar cliente: Leer el DNI del cliente, preguntar qué datos se desean modificar y actualizarlos.
 Eliminar cliente: Leer el DNI del cliente, confirmar la eliminación y eliminar los datos.
 
 CRUD Personal:
 Según la opción, se realiza: 
-Registrar personal: Leer datos del personal y guardarlo.
+Registrar personal: Leer datos del personal y guardarlos.
 Modificar datos personal: Leer el DNI del personal y actualizar los datos.
 Eliminar personal: Leer el DNI del personal y eliminar los datos.
 
 CRUD Reservas:
-Agregar reserva: Leer datos de la reserva y guardarlo.
-Modificar reserva: Leer el DNI de la reserva, preguntar qué datos se desean modificar y actualizar los datos.
+Agregar reserva: Leer datos de la reserva y guardarlos.
+Modificar reserva: Leer el DNI de la reserva, preguntar qué datos se desean modificar y actualizarlos.
 Eliminar reserva: Leer el DNI de la reserva y eliminar los datos.
 
 CRUD Habitación:
-Agregar habitación: Leer datos de la habitación y guardarlo.
+Agregar habitación: Leer datos de la habitación y guardarlos.
 Modificar habitación: Leer el número de habitación y actualizar los datos.
 Eliminar habitación: Leer el número de habitación y eliminar los datos.
 
@@ -55,31 +55,31 @@ Eliminar habitación: Leer el número de habitación y eliminar los datos.
 
 SALIDA
 
-CRUD Clientes:
-Mensajes de confirmación
-Cliente agregado 
-Cliente modificado
-Cliente eliminado 
-Mensajes de error o solicitud de confirmación según corresponda
-
-CRUD Personal:
-Mensajes de confirmación
-Personal registrado con éxito.
-Datos del personal modificados con éxito.
-Personal eliminado con éxito.
-Mensajes de error o solicitud de confirmación según corresponda.
-
-CRUD Reservas:
-Mensajes de confirmación
-Reserva registrada con éxito.
-Datos de la reserva modificado con éxito.
-Reserva eliminada con éxito.
-Mensajes de error o solicitud de confirmación según corresponda.
-
-CRUD Habitacion:
+CRUD Clientes.
 Mensajes de confirmación:
-Habitación agregada con éxito.
-Habitación modificada con éxito.
-Habitación eliminada con éxito.
+Cliente agregado. 
+Cliente modificado.
+Cliente eliminado.
+Mensaje de error o solicitud de confirmación según corresponda.
+
+CRUD Personal.
+Mensajes de confirmación:
+Personal registrado.
+Datos del personal modificados.
+Personal eliminado.
+Mensaje de error o solicitud de confirmación según corresponda.
+
+CRUD Reservas.
+Mensajes de confirmación:
+Reserva registrada.
+Datos de la reserva modificados.
+Reserva eliminada.
+Mensaje de error o solicitud de confirmación según corresponda.
+
+CRUD Habitacion.
+Mensajes de confirmación:
+Habitación agregada.
+Habitación modificada.
+Habitación eliminada.
 Mensajes de error o solicitud de confirmación según corresponda.
 
