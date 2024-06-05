@@ -20,5 +20,15 @@ while True:
             menu1 = int(input("Selecccione una opcion"))
             
             if menu1 == 1:
-                
+                agregar()
+            elif menu1 == 2:
+                modificar
+            elif menu1 == 3:
+                elimnar
+            elif menu1 == 4:
+                mostrar
+            elif menu1 == 5:
+                break 
+            
+        
                 
