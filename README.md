@@ -107,5 +107,5 @@
 ---
 DESCRIPCIÓN 
 
-SISTEMA GESTIÓN DE HOTEL
-Un sistema de gestión de hotel integraría diversas funciones para facilitar la administración eficiente del establecimiento. Incluiría módulos para la gestión de habitaciones, clientes, reservas y empleados. Con respecto a las habitaciones, permitiría realizar un seguimiento de la disponibilidad, asignación y estado de las mismas. Para los clientes, registraría información personal e historial de reservas. En cuanto a las reservas, facilitaría la gestión de disponibilidad, confirmación, modificaciones y cancelaciones. Además, el sistema administraría datos de los empleados, como horarios y roles. En resumen, un sistema integral que optimiza la operación y la experiencia tanto para los huéspedes como para el personal del hotel.
+**SISTEMA GESTIÓN DE HOTEL**
+Este sistema de gestión de hotel integraría diversas funciones para facilitar la administración eficiente del establecimiento. Incluiría módulos para la gestión de habitaciones, clientes, reservas y empleados. Con respecto a las habitaciones, permitiría realizar un seguimiento de la disponibilidad, asignación y estado de las mismas. Para los clientes, registraría información personal e historial de reservas. En cuanto a las reservas, facilitaría la gestión de disponibilidad, confirmación, modificaciones y cancelaciones. Además, el sistema administraría datos de los empleados, como horarios y roles. En resumen, un sistema integral que optimiza la operación y la experiencia tanto para los huéspedes como para el personal del hotel.
