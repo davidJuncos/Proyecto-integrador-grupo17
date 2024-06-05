@@ -52,24 +52,43 @@
      Repositorio: https://github.com/ttomy14/Repositorio_Personal
     </td>
    </tr>
+  <tr>
+    <td>
+     - David Eduardo Juncos
+    </td>
+    <td>
+     DNI: 29686787
+    </td>
+    <td>
+     Email: davidjuncos@hotmail.com
+    </td>
+    <td>
+     Github: https://github.com/davidJuncos
+    </td>
+    <td>
+     Repositorio: https://github.com/davidJuncos/Personal-ISPC-Evidencia2
+    </td>
+   </tr>
+  <tr>
+    <td>
+     - Aldana Tissera
+    </td>
+    <td>
+     DNI: 29254710
+    </td>
+    <td>
+     Email: aldanatissera54@gmail.com
+    </td>
+    <td>
+     Github: https://github.com/Aldana1948
+    </td>
+    <td>
+     Repositorio : https://github.com/Aldana1948/repositorio-personal
+    </td>
+   </tr>
   </tr>
  </table>
-
  
- 
- 
- 
-- David Eduardo Juncos
- DNI:29686787
- Email: davidjuncos@hotmail.com
- Github: https://github.com/davidJuncos
- Repositorio: https://github.com/davidJuncos/Personal-ISPC-Evidencia2
-
-- Aldana Tissera
- DNI : 29254710
- Email : aldanatissera54@gmail.com
-Github: https://github.com/Aldana1948
-repositorio : https://github.com/Aldana1948/repositorio-personal
 
 ---
 DESCRIPCIÓN 
