@@ -140,69 +140,74 @@ Algoritmo Algoritmo GestionHotelera
 						Fin Segun
 					Hasta Que menu1 == 4
 				3:
-					Repetir	
-						Escribir "1- Agregar reserva"
-						Escribir "2- Modificar reserva"
-						Escribir "3- Eliminar reserva"
-						Escribir "4- Salir"
-						leer menu1
-						Segun menu1 Hacer
-							1:
-								Escribir "Ingrese DNI de la persona que realizará la reserva: "
-								Leer dni
-								Escribir "Ingrese fecha de entrada al hotel: "
-								Leer entrada
-								Escribir "Ingrese fecha de salida del hotel: "
-								Leer salida
-								Escribir "Ingrese estado de la reserva: "
-								Leer estadoReserva
-							2:
-								Escribir "Ingrese DNI de la persona que realizo la reserva: "
-								Leer dni
-								Escribir "Desea modificar la fecha de entrada al hotel: "
-								Leer condicion
-								Si condicion = "SI" Entonces
-									Escribir "Ingrese fecha de entrada al hotel: "
-								FinSi
-								Leer entrada
-								Escribir "Desea modificar la fecha de salida del hotel: "
-								Leer condicion
-								Si condicion = "SI" Entonces
-									Escribir "Ingrese fecha de salida al hotel: "
-								FinSi
-								Leer salida
-								Escribir "Desea modificar el estado de la reserva: "
-								Leer condicion
-								Si condicion = "SI" Entonces
-									Escribir "Ingrese el estado de la reserva: "
-								FinSi
-								Leer estadoReserva
-						Fin Segun
-					Hasta Que menu1 == 4
-				4: 
-					Repetir	
-						Escribir "1- Agregar habitación"
-						Escribir "2- Modificar habitación"
-						Escribir "3- Eliminar habitación"
-						Escribir "4- Salir"
-						leer menu1
-						Segun menu1 Hacer
-							1:
-								Escribir "Ingrese numero de habitación: "
+							Escribir "Ingrese DNI de la persona que quieres eliminar: "
+							Leer dni
+							Escribir "Desea eliminar : ", nombre_cliente
+							Leer condicion
+							Si condicion = "SI" Entonces
+								Escribir "ELIMINADO"
+							FinSi
+					Fin Segun
+				Hasta Que menu1 == 4
+			4: 
+				Repetir	
+					Escribir "1- Agregar habitación"
+					Escribir "2- Modificar habitación"
+					Escribir "3- Eliminar habitación"
+					Escribir "4- Salir"
+					leer menu1
+					Segun menu1 Hacer
+						1:
+							Escribir "Ingrese numero de habitación: "
+							Leer nroHabitacion
+							Escribir "Ingrese tipo de habitación: "
+							Leer tipoHabitacion
+							Escribir "Ingrese precio por noche: "
+							Leer precioNoche
+							Escribir "Ingrese disponibilidad: "
+							Leer disponibilidad
+						2:	
+							Escribir "Ingrese el numero de habitación que quieres modicar: "
+							Leer nroHabitacion
+							Escribir "Desea modificar el numero de habitación: "
+							Leer condicion
+							Si condicion = "SI" Entonces
+								Escribir "Ingrese el numero de habitación: "
 								Leer nroHabitacion
-								Escribir "Ingrese tipo de habitación: "
+							FinSi
+							
+							
+							Escribir "Desea modificar el tipo de habitación: "
+							Leer condicion
+							Si condicion = "SI" Entonces
+								Escribir "Ingrese el numero de habitación: "
 								Leer tipoHabitacion
-								Escribir "Ingrese precio por noche: "
+							FinSi
+							
+							Escribir "Desea modificar el precio de habitación: "
+							Leer condicion
+							Si condicion = "SI" Entonces
+								Escribir "Ingrese el precio de habitación: "
 								Leer precioNoche
-								Escribir "Ingrese disponibilidad: "
+							FinSi
+							
+							
+							Escribir "Desea modificar la disponibilidad: "
+							Leer condicion
+							Si condicion = "SI" Entonces
+								Escribir "Ingrese la disponibilidad: "
 								Leer disponibilidad
-								
-						Fin Segun
-					Hasta Que menu1 == 4
-			Fin Segun
-		Hasta Que menu == 5
-FinAlgoritmo
-
-
-	
+							FinSi
+						3:
+							Escribir "Ingrese nro de habitacion: "
+							Leer nroHabitacion
+							Escribir "Desea eliminar : ", nroHabitacion
+							Leer condicion
+							Si condicion = "SI" Entonces
+								Escribir "ELIMINADO"
+							FinSi
+					Fin Segun
+				Hasta Que menu1 == 4
+		Fin Segun
+	Hasta Que menu == 5
 FinAlgoritmo
