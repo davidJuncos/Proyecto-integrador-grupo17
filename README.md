@@ -34,7 +34,7 @@
      john200430@gmail.com
     </td>
     <td>
-     Github: https://github.com/johnmack10
+      https://github.com/johnmack10
     </td>
     <td>
      Repositorio: https://github.com/johnmack10/repo_personal
