@@ -1,4 +1,4 @@
-from menu import agregar, modificar, elimnar, mostrar
+from crud_cliente import agregar_cliente, modificar_cliente, eliminar_cliente, mostrar_cliente
 
 while True:
     print("1-CRUD-Clientes")
@@ -20,13 +20,13 @@ while True:
             menu1 = int(input("Selecccione una opcion"))
             
             if menu1 == 1:
-                agregar()
+                agregar_cliente()
             elif menu1 == 2:
-                modificar
+                modificar_cliente()
             elif menu1 == 3:
-                elimnar
+                eliminar_cliente
             elif menu1 == 4:
-                mostrar
+                mostrar_cliente
             elif menu1 == 5:
                 break 
             
