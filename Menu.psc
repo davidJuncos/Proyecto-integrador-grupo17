@@ -1,6 +1,6 @@
-Algoritmo GestionHotelera		
-	//Falta diccionario para que funcione correctamente.
-	
+Algoritmo Algoritmo GestionHotelera		
+		//Falta diccionario para que funcione correctamente.
+		
 		Repetir	
 			Escribir "1-CRUD-Clientes"
 			Escribir "2-CRUD-Personal"
@@ -48,7 +48,7 @@ Algoritmo GestionHotelera
 									Escribir "Ingrese el apellido del cliente: "
 									Leer apellido_cliente
 								FinSi
-							
+								
 								Escribir "Desea modificar el e-mail del cliente: "
 								Leer condicion
 								Si condicion = "SI" Entonces
@@ -101,6 +101,42 @@ Algoritmo GestionHotelera
 								Escribir "Ingresar cargo: "
 								Leer rol
 							2:
+								Escribir "Ingrese DNI del personal: "
+								Leer dni1
+								Escribir "Desea modificar datos del personal: "
+								Leer condicion
+								Si condicion = "SI" Entonces
+									Escribir "Ingrese datos del personal: "
+									Leer nombreEmpleado
+								FinSi
+								Escribir "Desea modificar el apellido del personal: "
+								Leer condicion
+								Si condicion = "SI" Entonces
+									Escribir "Ingrese el apellido del personal: "
+									Leer apellidoEmepleado
+								FinSi
+								Escribir "Desea modificar el horario del personal: "
+								Leer condicion
+								Si condicion = "SI" Entonces
+									Escribir "Ingrese horario que desea seleccionar: "
+									Leer horario
+								FinSi
+								
+								Escribir "Desea modificar el cargo del personal: "
+								Leer condicion
+								Si condicion = "SI" Entonces
+									Escribir "Ingrese el cargo que desea ocupar: "
+									Leer rol
+								FinSi
+							3:
+								Escribir "Ingrese DNI de personal que desea eliminar: "
+								Leer dni1
+								Escribir "Desea eliminar : ", nombreEmpleado
+								Leer condicion
+								Si condicion = "SI" Entonces
+									Escribir "ELIMINADO"
+								FinSi
+								
 						Fin Segun
 					Hasta Que menu1 == 4
 				3:
@@ -167,3 +203,6 @@ Algoritmo GestionHotelera
 		Hasta Que menu == 5
 FinAlgoritmo
 
+
+	
+FinAlgoritmo
