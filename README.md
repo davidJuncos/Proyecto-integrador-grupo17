@@ -13,18 +13,35 @@
     EMAIL
    </th>
    <th>
-    REPOCITORIO GIT
+    REPOSITORIO GIT
    </th>
    <th>
-    REPOCITORIO PERSONAL
+    REPOSITORIO PERSONAL
    </th>
+   <tr>
+    <td>
+     - John Mackinson
+    </td>
+    <td>
+     DNI: 45.837.754
+    </td>
+    <td>
+     Email: john200430@gmail.com
+    </td>
+    <td>
+     Github: https://github.com/johnmack10
+    </td>
+    <td>
+     Repositorio: https://github.com/johnmack10/repo_personal
+    </td>
+   </tr>
   </tr>
  </table>
-- John Mackinson
- DNI: 45.837.754
- Email: john200430@gmail.com
- Github: https://github.com/johnmack10
- Repositorio: https://github.com/johnmack10/repo_personal
+
+ 
+ 
+ 
+ 
 
 - Tomás Ferrere
  DNI: 44.762.329
