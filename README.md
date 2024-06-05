@@ -1,6 +1,6 @@
 # Proyecto-integrador-grupo3
  INTEGRANTES:
- <table>
+ <table style="width: 100%;">
   <tr>
    <th>
     NOMBRE
