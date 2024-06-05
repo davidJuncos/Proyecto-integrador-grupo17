@@ -1,4 +1,7 @@
 from crud_cliente import agregar_cliente, modificar_cliente, eliminar_cliente, mostrar_cliente
+from crud_personal import agregar_personal, modificar_personal, eliminar_personal, mostrar_personal
+from crud_reservas import agregar_reservas, modificar_reservas, eliminar_reservas, mostrar_reservas
+from crud_habitacion import agregar_habitacion, modificar_habitacion, eliminar_habitacion, mostrar_habitacion
 
 while True:
     print("1-CRUD-Clientes")
