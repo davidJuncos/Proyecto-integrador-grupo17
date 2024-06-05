@@ -28,10 +28,10 @@
      Mackinson
     </td>
     <td>
-     DNI: 45.837.754
+     45.837.754
     </td>
     <td>
-     Email: john200430@gmail.com
+     john200430@gmail.com
     </td>
     <td>
      Github: https://github.com/johnmack10
@@ -48,10 +48,10 @@
      Ferrere
     </td>
     <td>
-     DNI: 44.762.329
+     44.762.329
     </td>
     <td>
-     Email: ferreretomas07@gmail.com
+     ferreretomas07@gmail.com
     </td>
     <td>
      Github: https://github.com/ttomy14
@@ -68,10 +68,10 @@
      Juncos
     </td>
     <td>
-     DNI: 29686787
+     29686787
     </td>
     <td>
-     Email: davidjuncos@hotmail.com
+     davidjuncos@hotmail.com
     </td>
     <td>
      Github: https://github.com/davidJuncos
@@ -88,10 +88,10 @@
      Tissera
     </td>
     <td>
-     DNI: 29254710
+     29254710
     </td>
     <td>
-     Email: aldanatissera54@gmail.com
+     aldanatissera54@gmail.com
     </td>
     <td>
      Github: https://github.com/Aldana1948
