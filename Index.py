@@ -73,3 +73,23 @@ while True:
             elif menu1 == 5:
                 break   
             
+    elif menu == 4:
+        while True:
+            print("1- Agregar habitacion")
+            print("2- Modificar habitacion")
+            print("3- Eliminar habitacion")
+            print("4- Mostrar habitacion")
+            print("5- Salir ")
+            
+            menu1 = int(input("Selecccione una opcion"))
+                
+            if menu1 == 1:
+                agregar_habitacion()
+            elif menu1 == 2:
+                modificar_habitacion()
+            elif menu1 == 3:
+                eliminar_habitacion()
+            elif menu1 == 4:
+                mostrar_habitacion()
+            elif menu1 == 5:
+                break
