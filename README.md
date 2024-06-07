@@ -111,12 +111,13 @@ DESCRIPCIÓN
 Este sistema de gestión de hotel integraría diversas funciones para facilitar la administración eficiente del establecimiento. Incluiría módulos para la gestión de habitaciones, clientes, reservas y empleados. Con respecto a las habitaciones, permitiría realizar un seguimiento de la disponibilidad, asignación y estado de las mismas. Para los clientes, registraría información personal e historial de reservas. En cuanto a las reservas, facilitaría la gestión de disponibilidad, confirmación, modificaciones y cancelaciones. Además, el sistema administraría datos de los empleados, como horarios y roles. En resumen, un sistema integral que optimiza la operación y la experiencia tanto para los huéspedes como para el personal del hotel.
 
 
-DETALLE DE ARCHIVOS PYTHON EN LA APLICACIÓN.
 
-En 'crud_cliente.py' tenemos las funciones para agregar, modificar, eliminar y mostrar clientes.
-En 'crud_personal.py' tenemos las funciones para agregar, modificar, eliminar y mostrar personal.
-En 'crud_reserva.py' tenemos las funciones para agregar, modificar, eliminar y mostrar reservas.
-En 'crud_habitacion.py' tenemos las funciones para agregar, modificar, eliminar y mostrar habitaciones.
+# Detalle de Archivos Python en la Aplicación
 
-'index.py'
+En `crud_cliente.py` tenemos las funciones para agregar, modificar, eliminar y mostrar clientes.  
+En `crud_personal.py` tenemos las funciones para agregar, modificar, eliminar y mostrar personal.  
+En `crud_reserva.py` tenemos las funciones para agregar, modificar, eliminar y mostrar reservas.  
+En `crud_habitacion.py` tenemos las funciones para agregar, modificar, eliminar y mostrar habitaciones.
+
+## `index.py`
 Este archivo actúa como el punto de entrada principal de la aplicación, proporcionando un menú que permite al usuario interactuar con las diferentes funcionalidades del sistema. Para que se puedan realizar las operaciones CRUD para clientes, personal, reservas y habitaciones mediante la llamada a las funciones definidas en los archivos mencionados anteriormente.
