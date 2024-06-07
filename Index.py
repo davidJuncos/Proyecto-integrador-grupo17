@@ -20,7 +20,7 @@ while True:
             print("4- Mostrar cliente")
             print("5- Salir ")
             
-            menu1 = int(input("Selecccione una opcion"))
+            menu1 = int(input("Selecccione una opcion: "))
             
             if menu1 == 1:
                 agregar_cliente()
@@ -41,7 +41,7 @@ while True:
             print("4- Mostrar personal")
             print("5- Salir ")
             
-            menu1 = int(input("Selecccione una opcion"))
+            menu1 = int(input("Selecccione una opcion: "))
                 
             if menu1 == 1:
                 agregar_personal()
@@ -62,6 +62,8 @@ while True:
             print("4- Mostrar reservas")
             print("5- Salir ") 
             
+            menu1 = int(input("Selecccione una opcion: "))
+            
             if menu1 == 1:
                 agregar_reserva()
             elif menu1 == 2:
@@ -73,3 +75,6 @@ while True:
             elif menu1 == 5:
                 break   
             
+    elif menu == 5:
+        print("Programa finalizado!")
+        break
