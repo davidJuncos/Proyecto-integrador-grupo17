@@ -73,13 +73,8 @@ while True:
             elif menu1 == 4:
                 mostrar_reserva()
             elif menu1 == 5:
-                break   
-            
-<<<<<<< HEAD
-    elif menu == 5:
-        print("Programa finalizado!")
-        break
-=======
+                break  
+             
     elif menu == 4:
         while True:
             print("1- Agregar habitacion")
@@ -88,7 +83,7 @@ while True:
             print("4- Mostrar habitacion")
             print("5- Salir ")
             
-            menu1 = int(input("Selecccione una opcion"))
+            menu1 = int(input("Selecccione una opcion: "))
                 
             if menu1 == 1:
                 agregar_habitacion()
@@ -100,4 +95,6 @@ while True:
                 mostrar_habitacion()
             elif menu1 == 5:
                 break
->>>>>>> b34e4c84bbab830b9700fe2d9c45c9590fea5e65
+    elif menu == 5:
+        print("Programa finalizado!")
+        break
