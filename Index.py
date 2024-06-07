@@ -53,4 +53,22 @@ while True:
                 mostrar_personal()
             elif menu1 == 5:
                 break
-                
+            
+    elif menu == 3:
+        while True:
+            print("1- Agregar reservas")
+            print("2- Modificar reservas")
+            print("3- Eliminar reservas")
+            print("4- Mostrar reservas")
+            print("5- Salir ") 
+            
+            if menu1 == 1:
+                agregar_reserva()
+            elif menu1 == 2:
+                modificar_reserva()
+            elif menu1 == 3:
+                eliminar_reserva()
+            elif menu1 == 4:
+                mostrar_reserva()
+            elif menu1 == 5:
+                break   
