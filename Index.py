@@ -27,11 +27,30 @@ while True:
             elif menu1 == 2:
                 modificar_cliente()
             elif menu1 == 3:
-                eliminar_cliente
+                eliminar_cliente()
             elif menu1 == 4:
-                mostrar_cliente
+                mostrar_cliente()
             elif menu1 == 5:
                 break 
             
-        
+    elif menu == 2:
+        while True:
+            print("1- Agregar personal")
+            print("2- Modificar personal")
+            print("3- Eliminar personal")
+            print("4- Mostrar personal")
+            print("5- Salir ")
+            
+            menu1 = int(input("Selecccione una opcion"))
+                
+            if menu1 == 1:
+                agregar_personal()
+            elif menu1 == 2:
+                modificar_personal()
+            elif menu1 == 3:
+                eliminar_personal()
+            elif menu1 == 4:
+                mostrar_personal()
+            elif menu1 == 5:
+                break
                 
