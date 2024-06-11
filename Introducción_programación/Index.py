@@ -1,7 +1,7 @@
 from crud_cliente import agregar_cliente, modificar_cliente, eliminar_cliente, mostrar_cliente
 from crud_personal import agregar_personal, modificar_personal, eliminar_personal, mostrar_personal_completo,mostrar_personal_unico
 from crud_reserva import agregar_reserva, modificar_reserva, eliminar_reserva, mostrar_reserva
-from crud_habitacion import agregar_habitacion, modificar_habitacion, eliminar_habitacion, mostrar_habitacion
+from crud_habitacion import agregar_habitacion, modificar_habitacion, eliminar_habitacion, mostrar_todas_habitaciones,mostrar_habitacion_unica
 
 while True:
     print("1-CRUD-Clientes")
@@ -83,8 +83,9 @@ while True:
             print("1- Agregar habitacion")
             print("2- Modificar habitacion")
             print("3- Eliminar habitacion")
-            print("4- Mostrar habitacion")
-            print("5- Salir ")
+            print("4- Mostrar habitaciones")
+            print("5- Buscar habitacion")
+            print("6- Salir ")
             
             menu1 = int(input("Selecccione una opcion: "))
                 
@@ -95,8 +96,10 @@ while True:
             elif menu1 == 3:
                 eliminar_habitacion()
             elif menu1 == 4:
-                mostrar_habitacion()
+                mostrar_todas_habitaciones ()
             elif menu1 == 5:
+                mostrar_habitacion_unica()
+            elif menu1 == 6:
                 break
     elif menu == 5:
         print("Programa finalizado!")
