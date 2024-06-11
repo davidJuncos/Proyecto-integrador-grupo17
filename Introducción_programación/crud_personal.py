@@ -1,27 +1,5 @@
 import Base_datos
-import mysql.connector
-
-def mostrar_roles():
-    try:
-        if not Base_datos.conn.is_connected():
-            print("Conexión no está activa")
-            return False
-        
-        query = "SELECT * FROM Roles"
-        Base_datos.cursor.execute(query)
-        roles = Base_datos.cursor.fetchall()
-
-        if roles:
-            for role in roles:
-                print(role)
-            print(f"{len(roles)} Filas afectadas")
-            return True
-        else:
-            print(f"No existe en la base de datos roles del personal")
-            return False
-    except Base_datos.mysql.connector.Error as error:
-        print(f"Error al ejecutar la consulta: {error}")
-        return False
+from roles import mostrar_roles
 
 def agregar_personal():
     try:
@@ -54,7 +32,7 @@ def agregar_personal():
     except Base_datos.mysql.connector.Error as error:
         print(f"Error al agregar personal: {error}")
 
-def modificar_personal(cursor):
+def modificar_personal():
     try:
         if not Base_datos.conn.is_connected():
             print("La conexión a la Base de Datos no está activa")
@@ -63,8 +41,8 @@ def modificar_personal(cursor):
         id_personal = input("Ingrese el ID del personal que desea modificar: ")
         query = "SELECT * FROM Personal WHERE idPersonal = %s"
         values = (id_personal,)
-        cursor.execute(query, values)
-        persona = cursor.fetchone()
+        Base_datos.cursor.execute(query, values)
+        persona = Base_datos.cursor.fetchone()
 
         if not persona:
             print(f"No existe en la base de datos la persona con ID: {id_personal}")
@@ -111,7 +89,7 @@ def modificar_personal(cursor):
         update_values.append(id_personal)
 
         # Ejecutar la consulta de actualización
-        cursor.execute(query, update_values)
+        Base_datos.cursor.execute(query, update_values)
         Base_datos.conn.commit()
 
         print("Personal modificado con éxito.")
@@ -189,47 +167,3 @@ def mostrar_personal_completo():
         print(f"Error al mostrar agenda completa: {error}")
         return False
 
-while True:
-    print("1. Agregar personal")
-    print("2. Modificar personal")
-    print("3. Eliminar personal")
-    print("4. Mostrar un personal")
-    print("5. Mostrar personal completo")
-    print("6. Salir")
-    
-    menu1 = int(input("Selecccione una opcion: "))
-    
-    if menu1 == 1:
-        agregar_personal()
-    elif menu1 == 2:
-        modificar_personal(Base_datos.cursor)
-    elif menu1 == 3:    
-        eliminar_personal()
-    elif menu1 == 4:
-        mostrar_personal_unico()
-    elif menu1 == 5:
-        mostrar_personal_completo()
-    elif menu1 == 6:
-        print("HASTA PRONTO")
-        break 
-
-# Crear un cursor
-try:
-    if not Base_datos.conn.is_connected():
-        Base_datos.conn = mysql.connector.connect(
-            host=Base_datos.HOST,
-            user=Base_datos.USER,
-            password=Base_datos.PASSWORD,
-            database=Base_datos.BD
-        )
-        Base_datos.cursor = Base_datos.conn.cursor()
-
-    # Ejemplo de uso de funciones
-    #mostrar_roles()
-    #agregar_personal()
-    #mostrar_personal()
-    # Otros llamados a funciones...
-    menu1
-finally:
-    # Cerrar el cursor y la conexión al final
-    Base_datos.cerrarConexion()
