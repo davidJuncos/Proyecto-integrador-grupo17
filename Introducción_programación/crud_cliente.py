@@ -1,12 +1,5 @@
 import Base_datos
 
-
-""" def agregar_cliente ():
-    def modificar_cliente ():
-    def eliminar_cliente ():
-    def mostrar_cliente ():
-"""
-
 def agregar_cliente():
     try:
         if not Base_datos.conn.is_connected():
@@ -169,31 +162,6 @@ def mostrar_clientes_completo():
         print(f"Error al mostrar clientes completos: {error}")
         return False
 
-
-while True:
-    print("1. Agregar Cliente")
-    print("2. Modificar Cliente")
-    print("3. Eliminar Cliente")
-    print("4. Mostrar un Cliente")
-    print("5. Mostrar Todos los Clientes")
-    print("6. Salir")
-    
-    menu1 = int(input("Selecccione una opcion: "))
-    
-    if menu1 == 1:
-        agregar_cliente()
-    elif menu1 == 2:
-        modificar_cliente()
-    elif menu1 == 3:    
-        eliminar_cliente()
-    elif menu1 == 4:
-        mostrar_un_cliente()
-    elif menu1 == 5:
-        mostrar_clientes_completo()
-    elif menu1 == 6:
-        print("HASTA PRONTO")
-        break 
-
 # Crear un cursor
 try:
     if not Base_datos.conn.is_connected():
@@ -210,7 +178,7 @@ try:
     #agregar_personal()
     #mostrar_personal()
     # Otros llamados a funciones...
-    menu1
+
 finally:
     # Cerrar el cursor y la conexión al final
     Base_datos.cerrarConexion()
