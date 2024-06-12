@@ -7,7 +7,7 @@ def agregar_reserva():
             return
         FechaEntrada = input("Ingrese la fecha de inicio (YYYY-MM-DD): ")
         FechaSalida = input("Ingrese la fecha de fin (YYYY-MM-DD): ")
-        EstadoReseva = int(input("Ingrese el estado de su reserva (1 - 0): "))
+        EstadoReseva = int(input("Ingrese el estado de su reserva (1- 'Disponible' 2- 'No disponible'): "))
         idPersonal = int(input("Ingrese ID del personal: "))
         DNI = int(input("Ingrese DNI del cliente: "))
         NroHabitacion = int(input("Ingrese el número de la habitación: "))
