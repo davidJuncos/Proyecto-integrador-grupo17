@@ -1,6 +1,6 @@
 from crud_cliente import agregar_cliente, modificar_cliente, eliminar_cliente, mostrar_cliente
 from crud_personal import agregar_personal, modificar_personal, eliminar_personal, mostrar_personal_completo,mostrar_personal_unico
-from crud_reserva import agregar_reserva, modificar_reserva, eliminar_reserva, mostrar_reserva
+from crud_reserva import agregar_reserva, modificar_reserva, eliminar_reserva, mostrar_reserva, mostrar_reserva_completa
 from crud_habitacion import agregar_habitacion, modificar_habitacion, eliminar_habitacion, mostrar_habitacion
 
 while True:
@@ -63,7 +63,8 @@ while True:
             print("2- Modificar reservas")
             print("3- Eliminar reservas")
             print("4- Mostrar reservas")
-            print("5- Salir ") 
+            print("5- Buscar reservas")
+            print("6- Salir") 
             
             menu1 = int(input("Selecccione una opcion: "))
             
@@ -74,8 +75,10 @@ while True:
             elif menu1 == 3:
                 eliminar_reserva()
             elif menu1 == 4:
-                mostrar_reserva()
+                mostrar_reserva_completa()
             elif menu1 == 5:
+                mostrar_reserva()
+            elif menu1 == 6:
                 break  
              
     elif menu == 4:
