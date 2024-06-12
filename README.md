@@ -124,3 +124,6 @@ Este sistema de gestión de hotel integraría diversas funciones para facilitar 
 
 ## `index.py`
 Este archivo actúa como el punto de entrada principal de la aplicación, proporcionando un menú que permite al usuario interactuar con las diferentes funcionalidades del sistema. Para que se puedan realizar las operaciones CRUD para clientes, personal, reservas y habitaciones mediante la llamada a las funciones definidas en los archivos mencionados anteriormente.
+
+# Guía de Uso del Proyecto de Gestión Hotelera
+Este proyecto está diseñado para gestionar diversas operaciones relacionadas con un hotel, como la administración de clientes, personal, habitaciones y reservas. A continuación, se detallan las instrucciones para instalar y utilizar la aplicación.
