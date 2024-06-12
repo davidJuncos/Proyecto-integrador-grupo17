@@ -1,46 +1,184 @@
 import Base_datos
-from roles import mostrar_roles
 
-def agregar_cliente ():
-    print("AGREGADO")
+def agregar_cliente():
+    try:
+        if not Base_datos.conn.is_connected():
+            print("Conexión no está activa")
+            return
+        
+        while True:
+            try:
+                DNI = int(input("Ingrese DNI: "))
+                break  # Si se puede convertir a entero, sal del bucle
+            except ValueError:
+                print("Por favor, ingrese un DNI válido.")
+       
+        Nombre = input("Ingrese nombre: ")
+        Apellido = input("Ingrese apellido: ")
+        Direccion = input("Ingrese Direccion: ")
+        Email = input("Ingrese Email: ")
+        NumeroTelefono = input("Ingrese Nro. de Telefono: ")
+              
+        query = "INSERT INTO Clientes (DNI, Nombre, Apellido, Direccion, Email, NumeroTelefono, Estado) VALUES (%s, %s, %s, %s, %s, %s, %s)"
+        values = (DNI, Nombre, Apellido, Direccion, Email, NumeroTelefono, 1)
+        
+        Base_datos.cursor.execute(query, values)
+        Base_datos.conn.commit()
+        print("Cliente insertado con éxito.")
+    except Base_datos.mysql.connector.Error as error:
+        print(f"Error al agregar personal: {error}")
 
-def modificar_cliente ():
-    print("MODIFICADO")
-    
-def eliminar_cliente ():
-    print("ELIMINADO")
+def modificar_cliente():
+    try:
+        if not Base_datos.conn.is_connected():
+            print("La conexión a la Base de Datos no está activa")
+            return False
 
-def mostrar_cliente ():
-    pass
+        DNI = input("Ingrese el DNI del Cliente que desea modificar: ")
+        query = "SELECT * FROM Clientes WHERE DNI = %s"
+        values = (DNI,)
+        Base_datos.cursor.execute(query, values)
+        cliente = Base_datos.cursor.fetchone()
 
+        if not cliente:
+            print(f"No existe en la base de datos la persona con ID: {DNI}")
+            return False
 
-def agregar_personal():
+        # Mostrar información actual del personal
+        print("Información actual del personal:")
+        print(f"Nombre: {cliente[1]}")
+        print(f"Apellido: {cliente[2]}")
+        print(f"Dirección: {cliente[3]}")
+        print(f"Email: {cliente[4]}")
+        print(f"Nro. Telefono: {cliente[5]}")
+
+        # Solicitar información actualizada del personal
+        nombre = input("Ingrese el nuevo nombre (o presione Enter para mantener el actual): ")
+        apellido = input("Ingrese el nuevo apellido (o presione Enter para mantener el actual): ")
+        Direccion = input("Ingrese la dirección, (o presione Enter para mantener el actual): ")
+        Email = input("Ingrese el nuevo Email (o presione Enter para mantener el actual): ")
+        NumeroTelefono = input("Ingrese el nuevo nro. de telefono (o presione Enter para mantener el actual): ")
+
+        # Construir la consulta de actualización
+        query = "UPDATE Clientes SET "
+        update_values = []
+
+        if nombre:
+            query += "Nombre = %s, "
+            update_values.append(nombre)
+        if apellido:
+            query += "Apellido = %s, "
+            update_values.append(apellido)
+        if Direccion:
+            query += "Direccion = %s, "
+            update_values.append(Direccion)
+        if Email:
+            query += "Email = %s, "
+            update_values.append(Email)
+        if NumeroTelefono:
+            query += "NumeroTelefono = %s, "
+            update_values.append(NumeroTelefono)
+
+        # Eliminar la última coma y espacio en la consulta
+        query = query.rstrip(", ")
+        query += " WHERE DNI = %s"
+        update_values.append(DNI)
+
+        # Ejecutar la consulta de actualización
+        Base_datos.cursor.execute(query, update_values)
+        Base_datos.conn.commit()
+
+        print("Cliente modificado con éxito.")
+        return True
+
+    except Base_datos.mysql.connector.Error as error:
+        print(f"Error al modificar personal: {error}")
+        return False
+
+def eliminar_cliente():
     try:
         if not Base_datos.conn.is_connected():
             print("Conexión no está activa")
             return
 
-        Nombre = input("Ingrese nombre: ")
-        Apellido = input("Ingrese apellido: ")
-        
-        while True:
-            try:
-                Horainicia = float(input("Ingrese horario de inicio (formato 24h, ej. 9.5 para 9:30): "))
-                HoraFin = float(input("Ingrese horario de salida (formato 24h, ej. 17.0 para 17:00): "))
-                break
-            except ValueError:
-                print("Por favor ingrese una hora válida en formato decimal.")
-
-        if not mostrar_roles():
-            return  # Si no hay roles, no continuar
-
-        IdRol = input("Ingrese Id del rol: ")
-
-        query = "INSERT INTO Personal (Nombre, Apellido, HoraInicia, HoraFin, Estado, IdRol) VALUES (%s, %s, %s, %s, %s, %s)"
-        values = (Nombre, Apellido, Horainicia, HoraFin, 1, IdRol)
-        
+        DNI = input("Ingrese el DNI del cliente que desea eliminar: ")
+        query = "DELETE FROM Clientes WHERE DNI = %s"
+        values = (DNI,)
         Base_datos.cursor.execute(query, values)
         Base_datos.conn.commit()
-        print("Personal insertado con éxito.")
+
+        if Base_datos.cursor.rowcount > 0:
+            print(f"Personal con ID {DNI} eliminado con éxito.")
+        else:
+            print(f"No se encontró ninguna persona con el ID {DNI}.")
     except Base_datos.mysql.connector.Error as error:
-        print(f"Error al agregar personal: {error}")
+        print(f"Error al eliminar personal: {error}")
+
+def mostrar_un_cliente():
+    try:
+        if not Base_datos.conn.is_connected():
+            print("Conexión no está activa")
+            return False
+
+        DNI = int(input("Ingrese el DNI del cliente: "))
+        query = "SELECT * FROM Clientes WHERE DNI = %s"
+        values = (DNI,)
+        Base_datos.cursor.execute(query, values)
+        clienteUnico = Base_datos.cursor.fetchone()
+        #print(personaUnica)
+        if clienteUnico:
+            print(f"Nombre: {clienteUnico[1]}")
+            print(f"Apellido: {clienteUnico[2]}")
+            print(f"Dirección: {clienteUnico[3]}")
+            print(f"Email: {clienteUnico[4]}")
+            print(f"Nro. de Telefono: {clienteUnico[5]}")
+            return True
+        else:
+            print(f"No existe en la base de datos del cliente con DNI: {DNI}")
+            return False
+    except Base_datos.mysql.connector.Error as error:
+        print(f"Error al mostrar personal: {error}")
+        return False
+
+def mostrar_clientes_completo():
+    try:
+        if not Base_datos.conn.is_connected():
+            print("Conexión no está activa")
+            return False
+
+        query = "SELECT * FROM Clientes"
+        Base_datos.cursor.execute(query)
+        client = Base_datos.cursor.fetchall()
+
+        if client:
+            for cliente in client:
+                print(cliente)
+            return True
+        else:
+            print("No hay clientes en la base de datos.")
+            return False
+
+    except Base_datos.mysql.connector.Error as error:
+        print(f"Error al mostrar clientes completos: {error}")
+        return False
+
+# Crear un cursor
+try:
+    if not Base_datos.conn.is_connected():
+        Base_datos.conn = Base_datos.mysql.connector.connect(
+            host=Base_datos.HOST,
+            user=Base_datos.USER,
+            password=Base_datos.PASSWORD,
+            database=Base_datos.BD
+        )
+        Base_datos.cursor = Base_datos.conn.cursor()
+
+    # Ejemplo de uso de funciones
+    #mostrar_roles()
+    #agregar_personal()
+    #mostrar_personal()
+    # Otros llamados a funciones...
+
+finally:
+    # Cerrar el cursor y la conexión al final
+    Base_datos.cerrarConexion()
