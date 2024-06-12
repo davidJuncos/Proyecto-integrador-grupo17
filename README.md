@@ -161,7 +161,7 @@ Siga estos pasos para ejecutar la aplicación:
 
 3. **Ejecución del menú principal**:
    - En VS Code, abra `index.py`.
-   - Ejecute el archivo `index.py` presionando `F5` o seleccionando la opción de "Ejecutar" en el menú.
+   - Ejecute el archivo `index.py` seleccionando la opción de "Ejecutar" en el menú.
      
 Ejecución del menú principal:
 
