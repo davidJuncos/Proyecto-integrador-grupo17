@@ -3,7 +3,7 @@ import mysql.connector
 
 HOST = "LocalHost"
 USER = "root"
-PASSWORD = "Logitech1."
+PASSWORD = "palaancha1"
 BD = "hoteles"
 
 try:

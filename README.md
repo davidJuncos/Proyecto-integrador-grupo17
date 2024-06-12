@@ -115,10 +115,10 @@ Este sistema de gestión de hotel integraría diversas funciones para facilitar 
 
 # Detalle de Archivos Python en la Aplicación
 
-En `crud_cliente.py` tenemos las funciones para agregar, modificar, eliminar y mostrar clientes.  
-En `crud_personal.py` tenemos las funciones para agregar, modificar, eliminar y mostrar personal.  
-En `crud_reserva.py` tenemos las funciones para agregar, modificar, eliminar y mostrar reservas.  
-En `crud_habitacion.py` tenemos las funciones para agregar, modificar, eliminar y mostrar habitaciones.
+* En `crud_cliente.py` tenemos las funciones para agregar, modificar, eliminar, mostrar y buscar clientes. El objetivo de este modulo es poder gestionar todas las operaciones relacionadas con los clientes del hotel.
+* En `crud_personal.py` tenemos las funciones para agregar, modificar, eliminar, mostrar y buscar personal. El objetivo de este modulo es poder gestionar todas las * operaciones relacionadas con el personal del hotel
+* En `crud_reserva.py` tenemos las funciones para agregar, modificar, eliminar, mostrar y buscar reservas. El objetivo de este modulo es poder gestionar todas las operaciones relacionadas con las reservas de habitaciones en el hotel.
+* En `crud_habitacion.py` tenemos las funciones para agregar, modificar, eliminar, mostrar y buscar habitaciones. El objetivo de este modulo es poder gestionar todas las operaciones relacionadas con las habitaciones del hotel.
 
 ## `index.py`
 Este archivo actúa como el punto de entrada principal de la aplicación, proporcionando un menú que permite al usuario interactuar con las diferentes funcionalidades del sistema. Para que se puedan realizar las operaciones CRUD para clientes, personal, reservas y habitaciones mediante la llamada a las funciones definidas en los archivos mencionados anteriormente.

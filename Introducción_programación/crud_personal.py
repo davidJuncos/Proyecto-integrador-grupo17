@@ -20,7 +20,6 @@ def agregar_personal():
 
         if not mostrar_roles():
             return  # Si no hay roles, no continuar
-
         IdRol = input("Ingrese Id del rol: ")
 
         query = "INSERT INTO Personal (Nombre, Apellido, HoraInicia, HoraFin, Estado, IdRol) VALUES (%s, %s, %s, %s, %s, %s)"
