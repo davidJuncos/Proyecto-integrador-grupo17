@@ -1,31 +1,9 @@
-"""
-import mysql.connector 
-
-HOST = "ISPC"
-USER = "root"
-PASSWORD = "palaancha1"
-BD = "hoteles"#nacidos
-
-# Conectarse a la base de datos
-conn = mysql.connector.connect(
-    host=HOST,
-    user=USER,
-    password=PASSWORD,
-    database=BD
-)
-
-# Crear un cursor
-cursor = conn.cursor()
-
-def cerrarConexion():
-    cursor.close()
-    conn.close()"""
 
 import mysql.connector 
 
 HOST = "LocalHost"
 USER = "root"
-PASSWORD = ""
+PASSWORD = "Logitech1."
 BD = "hoteles"
 
 try:
