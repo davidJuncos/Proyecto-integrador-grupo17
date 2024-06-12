@@ -121,7 +121,6 @@ Este sistema de gestión de hotel integraría diversas funciones para facilitar 
 * En roles.py, se encuentra la función para mostrar todos los roles. El objetivo de este módulo es visualizar todos los roles disponibles.
 * En crud_habitacion.py, se encuentran las funciones para agregar, modificar, eliminar, mostrar y buscar habitaciones. El objetivo de este módulo es gestionar todas las operaciones relacionadas con las habitaciones del hotel.
 * En Base_datos.py, se encuentra la conexión a la base de datos. El objetivo de este módulo es establecer la conexión con la base de datos para interactuar con ella.
-* En index.py, se encuentra el menú de opciones con todas las funciones CRUD. El objetivo de este módulo es permitir que el usuario interactúe con las diferentes funciones disponibles.
 
 ## `index.py`
 Este archivo actúa como el punto de entrada principal de la aplicación, proporcionando un menú que permite al usuario interactuar con las diferentes funcionalidades del sistema. Para que se puedan realizar las operaciones CRUD para clientes, personal, reservas y habitaciones mediante la llamada a las funciones definidas en los archivos mencionados anteriormente.
