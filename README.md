@@ -143,9 +143,9 @@ Siga estos pasos para instalar las dependencias necesarias:
 
 2. **Instale el conector MySQL**:
    - Ejecute el siguiente comando para instalar el módulo `mysql-connector-python`:
-     ```sh
+   
      pip install mysql-connector-python
-     ```
+     
 
 ## Configuración de la Base de Datos
 Utilice MySQL Workbench para gestionar la base de datos.
