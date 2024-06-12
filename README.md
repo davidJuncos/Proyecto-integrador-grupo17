@@ -127,3 +127,48 @@ Este archivo actúa como el punto de entrada principal de la aplicación, propor
 
 # Guía de Uso del Proyecto de Gestión Hotelera
 Este proyecto está diseñado para gestionar diversas operaciones relacionadas con un hotel, como la administración de clientes, personal, habitaciones y reservas. A continuación, se detallan las instrucciones para instalar y utilizar la aplicación.
+
+Requisitos del Sistema
+Para utilizar esta aplicación, se requiere:
+
+Visual Studio Code (VS Code)
+MySQL Workbench
+Python instalado en el sistema
+Conexión a Internet para descargar dependencias
+
+Instalación de Dependencias
+Siga estos pasos para instalar las dependencias necesarias:
+
+Abra el símbolo del sistema (cmd):
+
+Presione Win + R, escriba cmd y presione Entrar.
+Instale el conector MySQL:
+
+Ejecute el siguiente comando para instalar el módulo mysql-connector-python:
+pip install mysql-connector-python
+
+Configuración de la Base de Datos
+Utilice MySQL Workbench para gestionar la base de datos. 
+
+Ejecución de la Aplicación
+Siga estos pasos para ejecutar la aplicación:
+
+Abra Visual Studio Code (VS Code):
+
+Navegue a la carpeta del proyecto en su sistema de archivos.
+Configure la conexión a la base de datos:
+
+Abra el archivo Base_datos.py y asegúrese de que las credenciales de la base de datos (usuario, contraseña, host y nombre de la base de datos) sean correctas.
+Ejecución del menú principal:
+
+En VS Code, abra index.py.
+Ejecute el archivo index.py presionando F5 o seleccionando la opción de "Ejecutar" en el menú.
+
+Una vez que la aplicación esté en ejecución, se presentará un menú de opciones que permite interactuar con las diferentes funcionalidades. El usuario podrá:
+
+Agregar, modificar, eliminar, mostrar y buscar clientes.
+Agregar, modificar, eliminar, mostrar y buscar personal.
+Agregar, modificar, eliminar, mostrar y buscar reservas.
+Visualizar roles disponibles.
+Agregar, modificar, eliminar, mostrar y buscar habitaciones.
+
