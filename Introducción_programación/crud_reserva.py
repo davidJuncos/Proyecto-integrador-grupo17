@@ -12,13 +12,8 @@ def agregar_reserva():
         DNI = int(input("Ingrese DNI del cliente: "))
         NroHabitacion = int(input("Ingrese el número de la habitación: "))
         
-<<<<<<< HEAD
         query = "INSERT INTO Reservas (FechaEntrada, FechaSalida, EstadoReserva, idPersonal, DNI,  NroHabitacion) VALUES (%s, %s, %s, %s, %s, %s)"
         values = (FechaEntrada, FechaSalida, EstadoReseva, idPersonal, DNI, NroHabitacion)
-=======
-        query = "INSERT INTO Reservas (FechaEntrada, FechaSalida, EstadoReserva, idPersona, DNI,  NroHabitacion) VALUES (%s, %s, %s, %s, %s, %s)"
-        values = (FechaEntrada, FechaSalida, EstadoReseva, idPersona, DNI, NroHabitacion)
->>>>>>> ca1a96db691b309ba0827433b090bca0e5a55d6e
         
         Base_datos.cursor.execute(query, values)
         Base_datos.conn.commit()
