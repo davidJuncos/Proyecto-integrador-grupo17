@@ -161,4 +161,3 @@ def mostrar_clientes_completo():
     except Base_datos.mysql.connector.Error as error:
         print(f"Error al mostrar clientes completos: {error}")
         return False
-
