@@ -8,12 +8,12 @@ def agregar_reserva():
         FechaEntrada = input("Ingrese la fecha de inicio (YYYY-MM-DD): ")
         FechaSalida = input("Ingrese la fecha de fin (YYYY-MM-DD): ")
         EstadoReseva = int(input("Ingrese el estado de su reserva (1 - 0): "))
-        idPersona = int(input("Ingrese ID del personal: "))
+        idPersonal = int(input("Ingrese ID del personal: "))
         DNI = int(input("Ingrese DNI del cliente: "))
         NroHabitacion = int(input("Ingrese el número de la habitación: "))
         
         query = "INSERT INTO Reservas (FechaEntrada, FechaSalida, EstadoReserva, idPersonal, DNI,  NroHabitacion) VALUES (%s, %s, %s, %s, %s, %s)"
-        values = (FechaEntrada, FechaSalida, EstadoReseva, idPersona, DNI, NroHabitacion)
+        values = (FechaEntrada, FechaSalida, EstadoReseva, idPersonal, DNI, NroHabitacion)
         
         Base_datos.cursor.execute(query, values)
         Base_datos.conn.commit()
