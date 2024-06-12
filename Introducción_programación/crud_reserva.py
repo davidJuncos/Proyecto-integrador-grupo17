@@ -12,7 +12,7 @@ def agregar_reserva():
         DNI = int(input("Ingrese DNI del cliente: "))
         NroHabitacion = int(input("Ingrese el número de la habitación: "))
         
-        query = "INSERT INTO Reservas (FechaEntrada, FechaSalida, EstadoReserva, idPersona, DNI,  NroHabitacion) VALUES (%s, %s, %s, %s, %s, %s)"
+        query = "INSERT INTO Reservas (FechaEntrada, FechaSalida, EstadoReserva, idPersonal, DNI,  NroHabitacion) VALUES (%s, %s, %s, %s, %s, %s)"
         values = (FechaEntrada, FechaSalida, EstadoReseva, idPersona, DNI, NroHabitacion)
         
         Base_datos.cursor.execute(query, values)

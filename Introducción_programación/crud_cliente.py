@@ -162,23 +162,3 @@ def mostrar_clientes_completo():
         print(f"Error al mostrar clientes completos: {error}")
         return False
 
-# Crear un cursor
-try:
-    if not Base_datos.conn.is_connected():
-        Base_datos.conn = Base_datos.mysql.connector.connect(
-            host=Base_datos.HOST,
-            user=Base_datos.USER,
-            password=Base_datos.PASSWORD,
-            database=Base_datos.BD
-        )
-        Base_datos.cursor = Base_datos.conn.cursor()
-
-    # Ejemplo de uso de funciones
-    #mostrar_roles()
-    #agregar_personal()
-    #mostrar_personal()
-    # Otros llamados a funciones...
-
-finally:
-    # Cerrar el cursor y la conexión al final
-    Base_datos.cerrarConexion()

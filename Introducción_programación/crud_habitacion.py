@@ -6,7 +6,7 @@ def agregar_habitacion ():
             return
         NroHabitacion = int(input("Ingrese el numero de habitacion: "))
         TipoHabitacion = input("Ingrese tipo de habitacion: ")
-        IdDisponibilidad = input("Ingrese si esta disponible(1/0): ")
+        IdDisponibilidad = input("Ingrese si esta disponible (1-'Libre' 2-'Ocupado'): ")
         
         while True:
             try:
@@ -29,8 +29,9 @@ def modificar_habitacion ():
         if not Base_datos.conn.is_connected():
             print("La conexión a la Base de Datos no está activa")
             return False
-
+        print(mostrar_todas_habitaciones())
         num_habitacion = input("Ingrese el numero de la habitacion que desea modificar: ")
+        
         query = "SELECT * FROM habitaciones WHERE NroHabitacion = %s"
         values = (num_habitacion,)
         Base_datos.cursor.execute(query, values)
