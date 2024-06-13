@@ -81,24 +81,7 @@
     </td>
    </tr>
   <tr>
-    <td>
-     Aldana
-    </td>
-   <td>
-     Tissera
-    </td>
-    <td>
-     29254710
-    </td>
-    <td>
-     aldanatissera54@gmail.com
-    </td>
-    <td>
-      https://github.com/Aldana1948
-    </td>
-    <td>
-      https://github.com/Aldana1948/repositorio-personal
-    </td>
+  
    </tr>
   </tr>
  </table>
