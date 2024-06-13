@@ -32,7 +32,7 @@ def agregar_cliente():
         Base_datos.conn.commit()
         print("Cliente insertado con éxito.")
     except Base_datos.mysql.connector.Error as error:
-        print(f"Error al agregar personal: {error}")
+        print(f"Error al agregar cliente: {error}")
 
 def modificar_cliente():
     try:
@@ -98,7 +98,7 @@ def modificar_cliente():
         return True
 
     except Base_datos.mysql.connector.Error as error:
-        print(f"Error al modificar personal: {error}")
+        print(f"Error al modificar cliente: {error}")
         return False
 
 def eliminar_cliente():
@@ -114,11 +114,11 @@ def eliminar_cliente():
         Base_datos.conn.commit()
 
         if Base_datos.cursor.rowcount > 0:
-            print(f"Personal con ID {DNI} eliminado con éxito.")
+            print(f"Cliente con DNI {DNI} eliminado con éxito.")
         else:
             print(f"No se encontró ninguna cliente con el DNI {DNI}.")
     except Base_datos.mysql.connector.Error as error:
-        print(f"Error al eliminar personal: {error}")
+        print(f"Error al eliminar cliente: {error}")
 
 def mostrar_un_cliente():
     try:
@@ -143,7 +143,7 @@ def mostrar_un_cliente():
             print(f"No existe en la base de datos del cliente con DNI: {DNI}")
             return False
     except Base_datos.mysql.connector.Error as error:
-        print(f"Error al mostrar personal: {error}")
+        print(f"Error al mostrar cliente: {error}")
         return False
 
 def mostrar_clientes_completo():
