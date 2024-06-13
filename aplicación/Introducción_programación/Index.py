@@ -18,7 +18,7 @@ while True:
             print("2- Modificar cliente")
             print("3- Eliminar cliente")
             print("4- Mostrar clientes")
-            print("5- Mostrar un cliente")
+            print("5- Buscar cliente")
             print("6- Salir ")
             
             menu1 = int(input("Selecccione una opcion: "))
