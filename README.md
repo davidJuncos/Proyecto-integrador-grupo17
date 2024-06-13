@@ -136,7 +136,7 @@ Siga estos pasos para instalar las dependencias necesarias:
 
 ## Configuración de la Base de Datos
 Utilice MySQL Workbench para gestionar la base de datos.
-
+Debe ejecutar el script Hoteles.SQL que se encuentra en el directorio aplicacion\Base_datos\
 ## Ejecución de la Aplicación
 Siga estos pasos para ejecutar la aplicación:
 
