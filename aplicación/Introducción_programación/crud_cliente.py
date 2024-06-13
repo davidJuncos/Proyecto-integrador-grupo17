@@ -2,12 +2,14 @@ import Base_datos
 
 def agregar_cliente():
     try:
+        #verificacion de conexion de base de datos
         if not Base_datos.conn.is_connected():
             print("Conexión no está activa")
             return
         
         while True:
             try:
+                #se pide el ingreso de datos
                 DNI = int(input("Ingrese DNI: "))
                 break  # Si se puede convertir a entero, sal del bucle
             except ValueError:
@@ -18,11 +20,15 @@ def agregar_cliente():
         Direccion = input("Ingrese Direccion: ")
         Email = input("Ingrese Email: ")
         NumeroTelefono = input("Ingrese Nro. de Telefono: ")
-              
+
+        #Se agrega la instrucción SQL donde se inserta el Cliente      
         query = "INSERT INTO Clientes (DNI, Nombre, Apellido, Direccion, Email, NumeroTelefono, Estado) VALUES (%s, %s, %s, %s, %s, %s, %s)"
+
+        #aca pasa los valores guardados en las variables a Values (variable)
         values = (DNI, Nombre, Apellido, Direccion, Email, NumeroTelefono, 1)
         
         Base_datos.cursor.execute(query, values)
+        #ejecuta la instruccion SQL que se paso a la variable query , sus respectivos  valores 
         Base_datos.conn.commit()
         print("Cliente insertado con éxito.")
     except Base_datos.mysql.connector.Error as error:
