@@ -47,18 +47,18 @@ def modificar_cliente():
         cliente = Base_datos.cursor.fetchone()
 
         if not cliente:
-            print(f"No existe en la base de datos la persona con ID: {DNI}")
+            print(f"No existe en la base de datos el cliente con DNI: {DNI}")
             return False
 
-        # Mostrar información actual del personal
-        print("Información actual del personal:")
+        # Mostrar información actual del cliente
+        print("Información actual del cliente:")
         print(f"Nombre: {cliente[1]}")
         print(f"Apellido: {cliente[2]}")
         print(f"Dirección: {cliente[3]}")
         print(f"Email: {cliente[4]}")
         print(f"Nro. Telefono: {cliente[5]}")
 
-        # Solicitar información actualizada del personal
+        # Solicitar información actualizada del cliente
         nombre = input("Ingrese el nuevo nombre (o presione Enter para mantener el actual): ")
         apellido = input("Ingrese el nuevo apellido (o presione Enter para mantener el actual): ")
         Direccion = input("Ingrese la dirección, (o presione Enter para mantener el actual): ")
@@ -116,7 +116,7 @@ def eliminar_cliente():
         if Base_datos.cursor.rowcount > 0:
             print(f"Personal con ID {DNI} eliminado con éxito.")
         else:
-            print(f"No se encontró ninguna persona con el ID {DNI}.")
+            print(f"No se encontró ninguna cliente con el DNI {DNI}.")
     except Base_datos.mysql.connector.Error as error:
         print(f"Error al eliminar personal: {error}")
 
@@ -131,7 +131,7 @@ def mostrar_un_cliente():
         values = (DNI,)
         Base_datos.cursor.execute(query, values)
         clienteUnico = Base_datos.cursor.fetchone()
-        #print(personaUnica)
+        
         if clienteUnico:
             print(f"Nombre: {clienteUnico[1]}")
             print(f"Apellido: {clienteUnico[2]}")
