@@ -84,6 +84,48 @@
   
    </tr>
   </tr>
+  </th>
+   <tr>
+    <td>
+    Cesia Fiorella 
+    </td>
+    <td>
+     Cáceres Giménez
+    </td>
+    <td>
+   .
+    </td>
+    <td>
+    cesiaf.gimenez@gmail.com
+    </td>
+    <td>
+     .
+    </td>
+    <td>
+      .
+    </td>
+   </tr>
+   </th>
+   <tr>
+    <td>
+     Maria Gisela
+    </td>
+    <td>
+    Urzagaste
+    </td>
+    <td>
+     -
+    </td>
+    <td>
+     ds21tm.urzagaste.maria@gmail.com
+    </td>
+    <td>
+      https://github.com/Mar-Urzag
+    </td>
+    <td>
+     -
+    </td>
+   </tr>
  </table>
  
 
