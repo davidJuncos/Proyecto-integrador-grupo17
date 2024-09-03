@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 # Proyecto-integrador-grupo 17
  INTEGRANTES:
  <table style="width: 100%;">
