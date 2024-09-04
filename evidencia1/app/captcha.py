@@ -56,8 +56,15 @@ def main(resultado_usuario = None):
             print("Usuario Registrado")
             break
         else:
-            print("Resultado incorrecto. Intenta de nuevo.")
+            print("Resultado incorrecto.")
+            opcion = input("¿Deseas intentar nuevamente o salir del registro? (intentar/salir): ").strip().lower()
+            if opcion == 'salir':
+                print("Saliendo del registro...")
+                break
+            else:
+                print("Intentando nuevamente...")
             resultado_usuario = None
 
 if __name__ == "__main__":
     main()
+
