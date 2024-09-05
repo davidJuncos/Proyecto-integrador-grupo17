@@ -1,4 +1,5 @@
 from datetime import datetime
+import captcha # Importa el módulo captcha
 
 def registrar_ingreso(nombre_usuario):
     fecha_ingreso = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -10,6 +11,8 @@ def iniciar_sesion():
     nombre_usuario = input("Ingresa tu nombre de usuario: ")
     clave_correcta = "Registro1."  # Aquí debes verificar la clave real del usuario desde la base de datos o un archivo
     
+    captcha.main() # Valida el captcha antes de permitir el ingreso
+
     intentos_fallidos = 0
     
     while intentos_fallidos < 4:
@@ -37,6 +40,8 @@ def crear_usuario():
     nombre_usuario = input("Ingresa un nombre de usuario: ")
     clave = input("Ingresa una contraseña: ")
     
+    captcha.main() # Valida el captcha para permitir la creación del usuario
+
     with open("usuariosCreados.txt", "a") as file:
         file.write(f"Usuario: {nombre_usuario}, Clave: {clave}, Creado el {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
     

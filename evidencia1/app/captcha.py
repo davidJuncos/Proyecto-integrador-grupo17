@@ -13,9 +13,6 @@ def generar_captcha():
     if operacion_aleatoria in [aritmetica.promedio_n, aritmetica.sumar_n]:
         numero_de_argumentos = max(3, numero_de_argumentos)
 
-    print(f"Operación aleatoria seleccionada: {operacion_aleatoria.__name__}")
-    print(f"Número de argumentos: {numero_de_argumentos}")
-
     argumentos_aleatorios = [round(random.uniform(1.5, 10.5), 2) for _ in range(numero_de_argumentos)]
     resultado = round(operacion_aleatoria(*argumentos_aleatorios), 2)
     return operacion_aleatoria, argumentos_aleatorios, resultado
@@ -39,9 +36,6 @@ def main(resultado_usuario = None):
         operacion_aleatoria, argumentos_aleatorios, resultado_correcto = generar_captcha()
         operacion_str = formatear_operacion(operacion_aleatoria, argumentos_aleatorios)
 
-        print(f"\nOperación generada: {operacion_str}")
-        print(f"Resultado correcto (para verificación): {resultado_correcto}")
-
         while resultado_usuario is None:
             try:
                 resultado_usuario = round(float(input(f"¿Cuál es el resultado de la siguiente operación? \n{operacion_str} = ")), 2)
@@ -53,11 +47,17 @@ def main(resultado_usuario = None):
                 resultado_usuario = None
 
         if resultado_usuario == resultado_correcto:
-            print("Usuario Registrado")
             break
         else:
-            print("Resultado incorrecto. Intenta de nuevo.")
+            print("Resultado incorrecto.")
+            opcion = input("¿Deseas intentar nuevamente o salir del registro? (intentar/salir): ").strip().lower()
+            if opcion == 'salir':
+                print("Saliendo del registro...")
+                break
+            else:
+                print("Intentando nuevamente...")
             resultado_usuario = None
 
 if __name__ == "__main__":
     main()
+

@@ -12,7 +12,7 @@ def dividir_numeros(a,b) -> float:
    
     try:
         dividir = a / b
-        
+
         return dividir 
    
     except ZeroDivisionError:
