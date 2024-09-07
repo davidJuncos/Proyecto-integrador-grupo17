@@ -21,144 +21,6 @@ def es_clave_valida(clave):
     assert condiciones_cumplidas >= 2, "La clave debe cumplir al menos dos de las siguientes condiciones: minúscula, mayúscula, número, carácter especial."
     return True
 
-def iniciar_app():    
-    while True:
-        print("1-CRUD-Clientes")
-        print("2-CRUD-Personal")
-        print("3-CRUD-Reservas")
-        print("4-CRUD-Habitacion")
-        print("5-Salir")
-        
-        try:
-            menu = int(input("Seleccione una opcion: "))
-        except ValueError:
-            print("Por favor, ingrese un número válido.")
-            continue
-        
-        if menu == 1:
-            while True:
-                print("1- Agregar cliente")
-                print("2- Modificar cliente")
-                print("3- Eliminar cliente")
-                print("4- Mostrar clientes")
-                print("5- Buscar cliente")
-                print("6- Salir ")
-                
-                try:
-                    menu1 = int(input("Seleccione una opcion: "))
-                except ValueError:
-                    print("Por favor, ingrese un número válido.")
-                    continue
-                
-                if menu1 == 1:
-                    agregar_cliente()
-                elif menu1 == 2:
-                    modificar_cliente()
-                elif menu1 == 3:
-                    eliminar_cliente()
-                elif menu1 == 4:
-                    mostrar_clientes_completo()                
-                elif menu1 == 5:
-                    mostrar_un_cliente()
-                elif menu1 == 6:
-                    break 
-                else:
-                    print("Opción no válida.")
-                
-        elif menu == 2:
-            while True:
-                print("1- Agregar personal")
-                print("2- Modificar personal")
-                print("3- Eliminar personal")
-                print("4- Mostrar todo el personal")
-                print("5- Buscar personal")
-                print("6- Salir ")
-                
-                try:
-                    menu1 = int(input("Seleccione una opcion: "))
-                except ValueError:
-                    print("Por favor, ingrese un número válido.")
-                    continue
-                
-                if menu1 == 1:
-                    agregar_personal()
-                elif menu1 == 2:
-                    modificar_personal()
-                elif menu1 == 3:
-                    eliminar_personal()
-                elif menu1 == 4:
-                    mostrar_personal_completo()
-                elif menu1 == 5:
-                    mostrar_personal_unico()
-                elif menu1 == 6:
-                    break
-                else:
-                    print("Opción no válida.")
-                
-        elif menu == 3:
-            while True:
-                print("1- Agregar reservas")
-                print("2- Modificar reservas")
-                print("3- Eliminar reservas")
-                print("4- Mostrar reservas")
-                print("5- Buscar reservas")
-                print("6- Salir") 
-                
-                try:
-                    menu1 = int(input("Seleccione una opcion: "))
-                except ValueError:
-                    print("Por favor, ingrese un número válido.")
-                    continue
-                
-                if menu1 == 1:
-                    agregar_reserva()
-                elif menu1 == 2:
-                    modificar_reserva()
-                elif menu1 == 3:
-                    eliminar_reserva()
-                elif menu1 == 4:
-                    mostrar_reserva_completa()
-                elif menu1 == 5:
-                    mostrar_reserva()
-                elif menu1 == 6:
-                    break  
-                else:
-                    print("Opción no válida.")
-        elif menu == 4:
-            while True:
-                print("1- Agregar habitacion")
-                print("2- Modificar habitacion")
-                print("3- Eliminar habitacion")
-                print("4- Mostrar habitaciones")
-                print("5- Buscar habitacion")
-                print("6- Salir ")
-                
-                try:
-                    menu1 = int(input("Seleccione una opcion: "))
-                except ValueError:
-                    print("Por favor, ingrese un número válido.")
-                    continue
-                
-                if menu1 == 1:
-                    agregar_habitacion()
-                elif menu1 == 2:
-                    modificar_habitacion()
-                elif menu1 == 3:
-                    eliminar_habitacion()
-                elif menu1 == 4:
-                    mostrar_todas_habitaciones()
-                elif menu1 == 5:
-                    mostrar_habitacion_unica()
-                elif menu1 == 6:
-                    break
-                else:
-                    print("Opción no válida.")
-        elif menu == 5:
-            print("Programa finalizado!")
-            break
-        else:
-            print("Opción no válida.")
-
 def agregar_usuario():
     while True:
         try:
@@ -222,7 +84,8 @@ def iniciar_sesion():
     clave = input("Clave: ")
     
     if usuario in usuarios and usuarios[usuario]['clave'] == clave:
-        iniciar_app()  # Se puede llamar correctamente ahora
+         # Se puede llamar correctamente ahora
+        print("Acceso Correcto.") 
     else:
         print("Acceso denegado. Usuario o clave incorrectos.")
 
