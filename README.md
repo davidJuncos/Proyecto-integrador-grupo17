@@ -135,7 +135,7 @@
 
 ## DESCRIPCIÓN DE ESTRUCTURA
 - Dentro evidencia1/app tenemos todo lo requirido de la parte de Programación I 
-- Dentro de la carpeta del drive tenemos el documento requrido (contiene lo requerido en Base de Datos) e imagen de descripción de las relaciones entre las tablas
+- Dentro de la carpeta del drive tenemos el documento requrido (contiene lo de Base de Datos) e imagen de descripción de las relaciones entre las tablas
 - https://drive.google.com/drive/folders/1h4PIfK1MuvK5ip1OfDDHI1r5vk3qwLmE
 
 ## DESCRIPCIÓN 
