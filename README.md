@@ -135,7 +135,7 @@
 
 ## DESCRIPCIÓN DE ESTRUCTURA
 - Dentro evidencia1/app tenemos todo lo requirido de la parte de Programación I 
-- Dentro de la carpeta del drive tenemos el documento requrido (contiene lo de Base de Datos) e imagen de descripción de las relaciones entre las tablas
+- Dentro del documento tenemos lo requrido junto con lo pedido de Base de Datos 
 - [Evidencia_1.pdf](https://github.com/davidJuncos/Proyecto-integrador-grupo17/blob/master/evidencia1/_EVIDENCIA%20DE%20APRENDIZAJE%20N%C2%B01.pdf)
 
 ## DESCRIPCIÓN 
