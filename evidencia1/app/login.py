@@ -36,15 +36,6 @@ def agregar_usuario():
 
             email = input("Ingrese Email: ")
             fecha_nacimiento = input("Ingrese Fecha de Nacimiento: ")
-            
-            # Validar que el nombre de usuario sea único y tenga longitud adecuada
-            # while True:
-
-            #     nombreUsuario = input("Ingrese nombre de usuario: ")
-
-            #     assert es_nombre_usuario_valido(nombreUsuario), "El nombre de usuario debe tener entre 6 y 12 caracteres."
-            #     assert nombreUsuario not in usuarios, "El nombre de usuario ya está registrado."
-            #     break
 
             while True:
                 try:
