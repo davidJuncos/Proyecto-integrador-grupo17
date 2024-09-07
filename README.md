@@ -132,6 +132,12 @@
 ---
 
 # SISTEMA GESTIÓN DE HOTEL
+
+## DESCRIPCIÓN DE ESTRUCTURA
+Dentro evidencia1/app tenemos todo lo requirido de la parte de Programación I 
+Dentro de la carpeta del drive tenemos el documento requrido(contiene lo de Base de Datos) e imagen de descripción de las relaciones entre las tablas
+https://drive.google.com/drive/folders/1h4PIfK1MuvK5ip1OfDDHI1r5vk3qwLmE
+
 ## DESCRIPCIÓN 
 
 Este sistema de gestión de hotel integraría diversas funciones para facilitar la administración eficiente del establecimiento. Incluiría módulos para la gestión de habitaciones, clientes, reservas y empleados. Con respecto a las habitaciones, permitiría realizar un seguimiento de la disponibilidad, asignación y estado de las mismas. Para los clientes, registraría información personal e historial de reservas. En cuanto a las reservas, facilitaría la gestión de disponibilidad, confirmación, modificaciones y cancelaciones. Además, el sistema administraría datos de los empleados, como horarios y roles. En resumen, un sistema integral que optimiza la operación y la experiencia tanto para los huéspedes como para el personal del hotel.
