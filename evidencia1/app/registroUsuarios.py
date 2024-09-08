@@ -1,6 +1,7 @@
 from datetime import datetime
 import captcha # Importa el módulo captcha
 
+
 def registrar_ingreso(nombre_usuario):
     fecha_ingreso = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     with open("ingresos.txt", "a") as file:
