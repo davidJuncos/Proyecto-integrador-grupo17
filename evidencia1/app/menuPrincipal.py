@@ -1,8 +1,8 @@
 from datetime import datetime
 import re
-import captcha  # Asegúrate de tener el módulo captcha importado correctamente
+import captcha  
 
-# Diccionario que almacena usuarios y claves (de manera no persistente)
+
 usuarios = {}
 
 # Función para validar el nombre de usuario
