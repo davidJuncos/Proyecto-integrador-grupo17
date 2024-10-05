@@ -1,120 +1,97 @@
 # Proyecto-integrador-grupo3
  INTEGRANTES:
- <table style="width: 100%;">
+<table style="width: 100%;">
   <tr>
-   <th>
-    NOMBRE
-   </th>
-   <th>
-    APELLIDO
-   </th>
-   <th>
-    DNI
-   </th>
-   <th>
-    EMAIL
-   </th>
-   <th>
-    REPOSITORIO GIT
-   </th>
-   <th>
-    REPOSITORIO PERSONAL
-   </th>
-   <tr>
+    <th>
+      NOMBRE
+    </th>
+    <th>
+      APELLIDO
+    </th>
+    <th>
+      DNI
+    </th>
+    <th>
+      EMAIL
+    </th>
+    <th>
+      REPOSITORIO GIT
+    </th>
+  </tr>
+  <tr>
     <td>
-     John
+      John
     </td>
     <td>
-     Mackinson
+      Mackinson
     </td>
     <td>
-     45.837.754
+      45.837.754
     </td>
     <td>
-     john200430@gmail.com
+      john200430@gmail.com
     </td>
     <td>
       https://github.com/johnmack10
     </td>
-    <td>
-      https://github.com/johnmack10/repo_personal
-    </td>
-   </tr>
+  </tr>
   <tr>
     <td>
-     Tomás
+      Tomás
     </td>
     <td>
-     Ferrere
+      Ferrere
     </td>
     <td>
-     44.762.329
+      44.762.329
     </td>
     <td>
-     ferreretomas07@gmail.com
+      ferreretomas07@gmail.com
     </td>
     <td>
       https://github.com/ttomy14
     </td>
-    <td>
-      https://github.com/ttomy14/Repositorio_Personal
-    </td>
-   </tr>
+  </tr>
   <tr>
     <td>
-     David Eduardo
-    </td>
-   <td>
-     Juncos
+      David Eduardo
     </td>
     <td>
-     29686787
+      Juncos
     </td>
     <td>
-     davidjuncos@hotmail.com
+      29686787
+    </td>
+    <td>
+      davidjuncos@hotmail.com
     </td>
     <td>
       https://github.com/davidJuncos
     </td>
-    <td>
-      https://github.com/davidJuncos/Personal-ISPC-Evidencia2
-    </td>
-   </tr>
-  <tr>
-  
-   </tr>
   </tr>
-  </th>
-   <tr>
+  <tr>
     <td>
-    Cesia Fiorella 
+      Cesia Fiorella 
     </td>
     <td>
-     Cáceres Giménez
+      Cáceres Giménez
     </td>
     <td>
-   96320512
+      96320512
     </td>
     <td>
-    cesiaf.gimenez@gmail.com
+      cesiaf.gimenez@gmail.com
     </td>
     <td>
-     https://github.com/Cesiaf
+      https://github.com/Cesiaf
     </td>
-    <td>
-      .
-    </td>
-   </tr>
-   </th>
-   <tr>
-
-   </tr>
- </table>
+  </tr>
+</table>
 
  
 # Evidencia N° 2 - Módulo Innovación en Gestión de Datos
 
-## Descripción del Proyecto
+## 💡 Descripción del Proyecto
 
 Este proyecto consta de dos partes principales:
 
@@ -126,10 +103,11 @@ Este proyecto consta de dos partes principales:
 2. **Base de Datos II (MySQL)**:
     - Creación de una base de datos relacional en MySQL con tablas y relaciones (PK y FK).
     - Inserción de datos en las tablas y realización de consultas SQL, incluyendo un CRUD y consultas con `JOIN`.
+      
 
-## Instrucciones de Ejecución
+## ⚠️ Instrucciones de Ejecución
 
-### Programación I
+### 💻 Programación I
 
 1. Asegurarse de tener instalado **Python 3.x** en el equipo.
 2. Clonar el repositorio y navegar hasta la carpeta `evidencia2/Programacion`.
@@ -144,7 +122,10 @@ Este proyecto consta de dos partes principales:
 
 5. Los archivos binarios `usuarios.ispc` y `accesos.ispc` serán generados automáticamente para almacenar los datos.
 
-### Base de Datos II
+
+﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌
+
+### 🛢 Base de Datos II
 
 1. Asegurarse de tener **MySQL Workbench** instalado y configurado en el sistema.
 2. En la carpeta `evidencia2/BaseDeDatos` se encuentran tres archivos `.sql` que deben ejecutarse en el siguiente orden para configurar la base de datos correctamente:
@@ -166,12 +147,16 @@ Este proyecto consta de dos partes principales:
 
 3. Al seguir este orden de ejecución, la base de datos quedará configurada con la estructura, los datos iniciales y las consultas necesarias para interactuar con el backend del programa realizado en Python.
 
-## Explicación:
+## ❗ Explicación:
 - El archivo Gestion_hoteles_DB.sql es el que crea la estructura de la base de datos (tablas y relaciones).
 - El archivo insert_statements_hoteles.sql inserta los datos en las tablas.
 - El archivo CRUD_queries_hoteles.sql contiene las consultas y el CRUD que se utilizarán para interactuar con la base de datos.
 
-## Preguntas Frecuentes
+  
+﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌
+
+
+## ❓ Preguntas Frecuentes
 
 - **¿Cómo ejecutar y probar este programa?**
    - Para la parte de programación, ejecutar el archivo `main.py` desde la carpeta `evidencia2`. Para la parte de bases de datos, utilizar **MySQL Workbench** para importar la estructura de la base de datos, inyectar los datos y ejecutar las consultas SQL proporcionadas, siguiendo el orden descrito anteriormente.
