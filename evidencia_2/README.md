@@ -156,6 +156,7 @@ Este proyecto consta de dos partes principales:
 ﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌
 
 
+
 ## ❓ Preguntas Frecuentes
 
 - **¿Cómo ejecutar y probar este programa?**
