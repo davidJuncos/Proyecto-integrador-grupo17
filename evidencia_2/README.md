@@ -113,7 +113,7 @@ Este proyecto consta de dos partes principales:
 2. Clonar el repositorio y navegar hasta la carpeta `evidencia2/Programacion`.
 3. Ejecutar el archivo principal del programa para acceder al menú principal:
    ```bash
-   python main.py
+   python menu.py
    ```
 4. Desde el menú, se podrán realizar las siguientes acciones:
    - Agregar, modificar, eliminar y buscar usuarios.
@@ -160,7 +160,7 @@ Este proyecto consta de dos partes principales:
 ## ❓ Preguntas Frecuentes
 
 - **¿Cómo ejecutar y probar este programa?**
-   - Para la parte de programación, ejecutar el archivo `main.py` desde la carpeta `evidencia2`. Para la parte de bases de datos, utilizar **MySQL Workbench** para importar la estructura de la base de datos, inyectar los datos y ejecutar las consultas SQL proporcionadas, siguiendo el orden descrito anteriormente.
+   - Para la parte de programación, ejecutar el archivo `menu.py` desde la carpeta `evidencia2`. Para la parte de bases de datos, utilizar **MySQL Workbench** para importar la estructura de la base de datos, inyectar los datos y ejecutar las consultas SQL proporcionadas, siguiendo el orden descrito anteriormente.
 
 - **¿Qué inconvenientes se presentaron?**
    - Algunas dificultades incluyeron la serialización y deserialización correcta de objetos en archivos binarios en Python, así como el manejo de relaciones entre tablas en MySQL. Estos problemas se superaron mediante pruebas iterativas y ajustes en la lógica de la aplicación y en las consultas SQL.
