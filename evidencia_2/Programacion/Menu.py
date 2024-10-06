@@ -13,8 +13,19 @@ class Usuario:
         return f"Usuario(ID: {self.user_id}, Username: {self.username}, Email: {self.email})"
 
 
+class Acceso:
+    def __init__(self, username):
+        self.username = username
+        self.fecha_acceso = datetime.now()
+
+    def __str__(self):
+        return f"Usuario: {self.username}, Fecha de acceso: {self.fecha_acceso}"
+
+
 class SistemaUsuarios:
     FILE_NAME_USUARIOS = 'usuarios.ispc'
+    FILE_NAME_ACCESOS = 'accesos.ispc'
+    FILE_NAME_LOGS = 'logs.txt'
 
     @staticmethod
     def cargar_usuarios():
@@ -75,6 +86,36 @@ class SistemaUsuarios:
         else:
             print("No hay usuarios registrados.")
 
+    @staticmethod
+    def registrar_acceso_exitoso(username):
+        acceso = Acceso(username)
+        with open(SistemaUsuarios.FILE_NAME_ACCESOS, 'ab') as file:
+            pickle.dump(acceso, file)
+        print(f"Se registró el acceso exitoso de {username} en 'accesos.ispc'.")
+
+    @staticmethod
+    def registrar_acceso_fallido(username, password):
+        fecha_actual = datetime.now()
+        with open(SistemaUsuarios.FILE_NAME_LOGS, 'a') as log_file:
+            log_file.write(f"[{fecha_actual}] Intento fallido de acceso - Usuario: {username}, Clave: {password}\n")
+        print(f"Se registró el intento fallido de {username} en 'logs.txt'. ")
+
+    @staticmethod
+    def cargar_y_mostrar_accesos():
+        """Función para cargar y mostrar el contenido del archivo accesos.ispc"""
+        try:
+            with open(SistemaUsuarios.FILE_NAME_ACCESOS, 'rb') as file:
+                while True:
+                    try:
+                        acceso = pickle.load(file)
+                        print(acceso)
+                    except EOFError:
+                        break
+        except FileNotFoundError:
+            print("El archivo accesos.ispc no fue encontrado.")
+        except Exception as e:
+            print(f"Error al cargar el archivo: {e}")
+
 
 def crear_usuario():
     user_id = int(input("Ingresa el ID del usuario: "))
@@ -84,7 +125,7 @@ def crear_usuario():
 
     usuario = Usuario(user_id, username, password, email)
     SistemaUsuarios.agregar_usuario(usuario)
-    print(f"Usuario {username} creado exitosamente.")
+    print(f"Usuario {username} creado exitosamente y registrado en 'usuarios.ispc'.")
 
 
 def modificar_usuario():
@@ -117,6 +158,7 @@ def buscar_usuario():
     else:
         print("Usuario no encontrado.")
 
+
 def iniciar_sesion():
     username = input("Ingresa el nombre de usuario: ")
     password = input("Ingresa la contraseña: ")
@@ -124,6 +166,7 @@ def iniciar_sesion():
     usuario = SistemaUsuarios.buscar_usuario(username)
     if usuario and usuario.password == password:
         print(f"Ingreso exitoso para {usuario.username}.")
+        SistemaUsuarios.registrar_acceso_exitoso(username)
         while True:
             print("\nMenú de Usuario")
             print("1. Volver al menú principal")
@@ -139,7 +182,9 @@ def iniciar_sesion():
                 print("Opción no válida.")
     else:
         print("Usuario o contraseña incorrectos.")
-        
+        SistemaUsuarios.registrar_acceso_fallido(username, password)
+
+
 def menu_principal():
     while True:
         print("\nMenú Principal")
@@ -149,7 +194,8 @@ def menu_principal():
         print("4. Buscar usuario por username o email")
         print("5. Mostrar todos los usuarios")
         print("6. Ingresar al sistema")
-        print("7. Salir de la aplicación")
+        print("7. Ver accesos desde el archivo binario")
+        print("8. Salir de la aplicación")
 
         opcion = input("Selecciona una opción: ")
 
@@ -166,11 +212,12 @@ def menu_principal():
         elif opcion == '6':
             iniciar_sesion()
         elif opcion == '7':
+            SistemaUsuarios.cargar_y_mostrar_accesos()  # Nueva opción para cargar el archivo binario de accesos
+        elif opcion == '8':
             print("Saliendo de la aplicación...")
             break
         else:
             print("Opción no válida.")
-        
 
 
 if __name__ == "__main__":
