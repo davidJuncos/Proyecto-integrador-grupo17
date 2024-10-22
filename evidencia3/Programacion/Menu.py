@@ -29,6 +29,8 @@ class SistemaUsuarios:
     FILE_NAME_ACCESOS = 'accesos.ispc'
     FILE_NAME_LOGS = 'logs.txt'
 
+    usuarios_ordenados = False #controlar si los usuarios están ordenados
+    
     @staticmethod
     def cargar_usuarios():
         try:
@@ -70,14 +72,33 @@ class SistemaUsuarios:
             print(f"Usuario {username_or_email} eliminado exitosamente.")
         else:
             print(f"Usuario {username_or_email} no encontrado.")
+    
+    def busqueda_binaria(usuarios, username):
+        inicio, fin = 0, len(usuarios) - 1
+        while inicio <= fin:
+            medio = (inicio + fin) // 2
+            if usuarios[medio].username == username:
+                return usuarios[medio]
+            elif usuarios[medio].username < username:
+                inicio = medio + 1
+            else:
+                fin = medio - 1
+        return None
 
     @staticmethod
-    def buscar_usuario(username_or_email):
+    def buscar_usuario(username):
         usuarios = SistemaUsuarios.cargar_usuarios()
-        for usuario in usuarios:
-            if usuario.username == username_or_email or usuario.email == username_or_email:
-                return usuario
-        return None
+
+        if SistemaUsuarios.usuarios_ordenados:
+            print("Búsqueda realizada por técnica binaria.")
+            return SistemaUsuarios.busqueda_binaria(usuarios, username)
+        else:
+            print("Búsqueda realizada por técnica secuencial.")
+            for usuario in usuarios:
+                if usuario.username == username:
+                    return usuario
+            return None
+
 
     @staticmethod
     def mostrar_usuarios():
@@ -121,9 +142,10 @@ class SistemaUsuarios:
     @staticmethod
     def ordenar_por_python(usuarios):
         usuarios.sort(key=lambda x: x.username)
+        SistemaUsuarios.usuarios_ordenados = True
         print("Usuarios ordenados usando sort() de Python.")
         SistemaUsuarios.guardar_usuarios(usuarios)
-
+        
     @staticmethod
     def ordenar_por_burbuja(usuarios):
         n = len(usuarios)
@@ -131,6 +153,7 @@ class SistemaUsuarios:
             for j in range(0, n - i - 1):
                 if usuarios[j].username > usuarios[j + 1].username:
                     usuarios[j], usuarios[j + 1] = usuarios[j + 1], usuarios[j]
+        SistemaUsuarios.usuarios_ordenados = True
         print("Usuarios ordenados usando Burbuja.")
         SistemaUsuarios.guardar_usuarios(usuarios)
 
