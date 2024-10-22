@@ -7,7 +7,7 @@ class Usuario:
         self.username = username
         self.password = password
         self.email = email
-        self.accesos = []  # Lista para almacenar los accesos del usuario
+        self.accesos = []  
 
     def __str__(self):
         return f"Usuario(ID: {self.user_id}, Username: {self.username}, Email: {self.email})"
