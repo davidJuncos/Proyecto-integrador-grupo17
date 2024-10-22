@@ -118,6 +118,22 @@ class SistemaUsuarios:
         except Exception as e:
             print(f"Error al cargar el archivo: {e}")
 
+    @staticmethod
+    def ordenar_por_python(usuarios):
+        usuarios.sort(key=lambda x: x.username)
+        print("Usuarios ordenados usando sort() de Python.")
+        SistemaUsuarios.guardar_usuarios(usuarios)
+
+    @staticmethod
+    def ordenar_por_burbuja(usuarios):
+        n = len(usuarios)
+        for i in range(n):
+            for j in range(0, n - i - 1):
+                if usuarios[j].username > usuarios[j + 1].username:
+                    usuarios[j], usuarios[j + 1] = usuarios[j + 1], usuarios[j]
+        print("Usuarios ordenados usando Burbuja.")
+        SistemaUsuarios.guardar_usuarios(usuarios)
+
 def crear_usuario():
     user_id = int(input("Ingresa el ID del usuario: "))
     username = input("Ingresa el nombre de usuario: ")
@@ -186,6 +202,24 @@ def iniciar_sesion():
         SistemaUsuarios.registrar_acceso_fallido(username, password)
 
    
+
+
+def menu_ordenamiento():
+    print("\nOpciones de ordenamiento:")
+    print("1. Ordenar por Burbuja")
+    print("2. Ordenar usando sort() de Python")
+    opcion = input("Elige una opción: ")
+
+    usuarios = SistemaUsuarios.cargar_usuarios()
+
+    if opcion == '1':
+        SistemaUsuarios.ordenar_por_burbuja(usuarios)
+    elif opcion == '2':
+        SistemaUsuarios.ordenar_por_python(usuarios)
+    else:
+        print("Opción no válida.")
+
+
 def menu_principal():
     while True:
         print("\nMenú Principal")
@@ -196,7 +230,8 @@ def menu_principal():
         print("5. Mostrar todos los usuarios")
         print("6. Ingresar al sistema")
         print("7. Ver accesos desde el archivo binario")
-        print("8. Salir de la aplicación")
+        print("8. Ordenar usuarios")
+        print("9. Salir de la aplicación")
 
         opcion = input("Selecciona una opción: ")
 
@@ -215,6 +250,8 @@ def menu_principal():
         elif opcion == '7':
             SistemaUsuarios.cargar_y_mostrar_accesos()
         elif opcion == '8':
+            menu_ordenamiento()  # Llamada al menú de ordenamiento
+        elif opcion == '9':
             print("Saliendo de la aplicación...")
             break
         else:
