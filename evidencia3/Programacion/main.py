@@ -1,6 +1,6 @@
 # main.py
 from menus import menu_usuarios, menu_graficos
-from usuario import Usuario  
+from usuario import Usuario, Acceso
 from registros_pluviales import RegistrosPluviales
 import pickle
 

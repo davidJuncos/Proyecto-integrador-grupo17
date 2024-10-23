@@ -2,7 +2,8 @@
 from sistema_usuarios import SistemaUsuarios
 from registros_pluviales import RegistrosPluviales
 from graficos_registros import Graficos
-from usuario import Usuario
+from usuario import Usuario, Acceso
+
 
 
 def menu_graficos(registros):
@@ -35,7 +36,8 @@ def menu_usuarios():
         print("5. Mostrar Usuarios")
         print("6. Ordenar Usuarios")
         print("7. Cargar Accesos")
-        print("8. Salir")
+        print("8. Iniciar Sesión")
+        print("9. Salir")
         opcion = input("Selecciona una opción: ")
 
         if opcion == '1':
@@ -80,6 +82,8 @@ def menu_usuarios():
         elif opcion == '7':
             SistemaUsuarios.cargar_y_mostrar_accesos()
         elif opcion == '8':
+            SistemaUsuarios.iniciar_sesion()
+        elif opcion == '9':
             print("Saliendo del menú de usuarios.")
             break
         else:

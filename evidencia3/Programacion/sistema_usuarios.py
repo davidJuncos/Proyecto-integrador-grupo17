@@ -3,14 +3,22 @@ from usuario import Usuario
 from usuario import Acceso 
 from datetime import datetime
 import pickle
+import os
 
 class SistemaUsuarios:
-    FILE_NAME_USUARIOS = 'usuarios.ispc'
-    FILE_NAME_ACCESOS = 'accesos.ispc'
-    FILE_NAME_LOGS = 'logs.txt'
+    # Obtén el directorio del script actual
+    SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
+    # Especifica la ruta de la carpeta "Programación" dentro de "Evidencia3"
+    PROGRAMACION_DIR = os.path.join(SCRIPT_DIR, '..', 'Programacion')
+
+    # Define las rutas para los archivos dentro de la carpeta "Programación"
+    FILE_NAME_USUARIOS = os.path.join(PROGRAMACION_DIR, 'usuarios.ispc')
+    FILE_NAME_ACCESOS = os.path.join(PROGRAMACION_DIR, 'accesos.ispc')
+    FILE_NAME_LOGS = os.path.join(PROGRAMACION_DIR, 'logs.txt')
+    
     usuarios_ordenados = False
-
+    
     @staticmethod
     def cargar_usuarios():
         try:
@@ -66,7 +74,27 @@ class SistemaUsuarios:
             print(f"Usuario {username_or_email} eliminado exitosamente.")
         else:
             print(f"Usuario {username_or_email} no encontrado.")
+    
+    @staticmethod
+    def iniciar_sesion():
+        username = input("Ingresa tu nombre de usuario: ")
+        password = input("Ingresa tu contraseña: ")
 
+        # Buscar usuario
+        usuario = SistemaUsuarios.buscar_usuario(username)
+        
+        if usuario:
+            if usuario.password == password:
+                print("Inicio de sesión exitoso.")
+                SistemaUsuarios.registrar_acceso_exitoso(username)  # Registrar acceso exitoso
+            else:
+                print("Contraseña incorrecta.")
+                SistemaUsuarios.registrar_acceso_fallido(username, password)  # Registrar acceso fallido
+        else:
+            print("Usuario no encontrado.")
+            SistemaUsuarios.registrar_acceso_fallido(username, password)  # Registrar acceso fallido
+
+    
     @staticmethod
     def busqueda_binaria(usuarios, username):
         inicio, fin = 0, len(usuarios) - 1
@@ -131,10 +159,12 @@ class SistemaUsuarios:
                     except EOFError:
                         break
         except FileNotFoundError:
-            print("El archivo accesos.ispc no fue encontrado.")
+            # Crea el archivo si no existe
+            with open(SistemaUsuarios.FILE_NAME_ACCESOS, 'wb') as file:
+                print("El archivo accesos.ispc no existía, se creó uno nuevo.")
         except Exception as e:
             print(f"Error al cargar el archivo: {e}")
-
+    
     @staticmethod
     def ordenar_por_python(usuarios):
         usuarios.sort(key=lambda x: x.username)
