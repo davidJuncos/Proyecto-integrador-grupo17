@@ -121,3 +121,20 @@ CREATE TABLE IF NOT EXISTS `servicioConsumido` (
   FOREIGN KEY (idReserva) REFERENCES `reserva`(id),
   FOREIGN KEY (idServicio) REFERENCES `servicio`(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+-- -----------------------------------------------------
+-- Tabla `mantenimiento`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mantenimiento` (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  idHabitacion INT NOT NULL,
+  idPersonal INT NOT NULL,
+  descripcionProblema TEXT NOT NULL,
+  fechaReporte DATE NOT NULL,
+  fechaResolucion DATE,
+  idEstadoMantenimiento INT NOT NULL,
+  costo DECIMAL(10,2), 
+  FOREIGN KEY (idHabitacion) REFERENCES `habitacion`(id),
+  FOREIGN KEY (idPersonal) REFERENCES `personal`(id),
+  FOREIGN KEY (idEstadoMantenimiento) REFERENCES `estadoMantenimiento`(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;

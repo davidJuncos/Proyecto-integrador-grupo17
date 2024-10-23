@@ -125,29 +125,27 @@ INSERT INTO personal (nombre, apellido, horaEntrada, horaSalida, idRol) VALUES
 ('Claudia', 'Díaz', '09:00:00', '17:00:00', 3);
 
 -- INYECCION DE DATOS EN TABLA MANTENIMIENTO
-INSERT INTO mantenimiento (idHabitacion, idPersonal, descripcionProblema, fechaReporte, idEstadoMantenimiento) VALUES
-(10, 4, 'Reparar fuga de agua en el baño', '2024-10-01', 1),  
-(20, 4, 'Ajustar calefacción que no enciende', '2024-10-02', 2),  
-(30, 4, 'Reemplazar bombilla del plafón', '2024-10-03', 3),  
-(40, 4, 'Limpieza de aire acondicionado', '2024-10-01', 1),  
-(5, 3, 'Pintura de pared desgastada', '2024-10-04', 2),  
-(6, 2, 'Revisar cerradura de la puerta', '2024-10-05', 1),  
-(7, 4, 'Reparar grifo que gotea', '2024-10-01', 3),  
-(8, 4, 'Reemplazar colchón dañado', '2024-10-02', 1),  
-(9, 4, 'Revisar sistema eléctrico', '2024-10-03', 2),  
-(10, 3, 'Ajustar ventana que no cierra bien', '2024-10-04', 1),  
-(11, 4, 'Inspeccionar fuga en el aire acondicionado', '2024-10-02', 3),  
-(12, 4, 'Desinfectar moho en la pared', '2024-10-03', 1),  
-(13, 4, 'Reparar tapa del inodoro', '2024-10-05', 2),  
-(14, 3, 'Reemplazar cortinas rotas', '2024-10-01', 3),  
-(15, 4, 'Ajustar radiador que no calienta', '2024-10-02', 1),  
-(16, 4, 'Cambiar bombilla de la lámpara de lectura', '2024-10-03', 1),  
-(17, 2, 'Reparar silla rota', '2024-10-04', 3),  
-(18, 3, 'Desinfectar moho en el baño', '2024-10-01', 2),  
-(19, 4, 'Inspeccionar fugas en la ducha', '2024-10-02', 1),  
-(20, 2, 'Cambiar cerradura de la puerta principal', '2024-10-03', 3);  
-
-
+INSERT INTO mantenimiento (idHabitacion, idPersonal, descripcionProblema, fechaReporte, fechaResolucion, idEstadoMantenimiento) VALUES
+(10, 4, 'Reparar fuga de agua en el baño', '2024-10-01', '2024-10-05', 1),  
+(20, 4, 'Ajustar calefacción que no enciende', '2024-10-02', '2024-10-06', 2),  
+(30, 4, 'Reemplazar bombilla del plafón', '2024-10-03', '2024-10-07', 3),  
+(40, 4, 'Limpieza de aire acondicionado', '2024-10-01', '2024-10-05', 1),  
+(5, 3, 'Pintura de pared desgastada', '2024-10-04', '2024-10-08', 2),  
+(6, 2, 'Revisar cerradura de la puerta', '2024-10-05', '2024-10-09', 1),  
+(7, 4, 'Reparar grifo que gotea', '2024-10-01', '2024-10-05', 3),  
+(8, 4, 'Reemplazar colchón dañado', '2024-10-02', '2024-10-06', 1),  
+(9, 4, 'Revisar sistema eléctrico', '2024-10-03', '2024-10-07', 2),  
+(10, 3, 'Ajustar ventana que no cierra bien', '2024-10-04', '2024-10-08', 1),  
+(11, 4, 'Inspeccionar fuga en el aire acondicionado', '2024-10-02', NULL, 3),  
+(12, 4, 'Desinfectar moho en la pared', '2024-10-03', NULL, 1),  
+(13, 4, 'Reparar tapa del inodoro', '2024-10-05', NULL, 2),  
+(14, 3, 'Reemplazar cortinas rotas', '2024-10-01', NULL, 3),  
+(15, 4, 'Ajustar radiador que no calienta', '2024-10-02', NULL, 1),  
+(16, 4, 'Cambiar bombilla de la lámpara de lectura', '2024-10-03', NULL, 1),  
+(17, 2, 'Reparar silla rota', '2024-10-04', NULL, 3),  
+(18, 3, 'Desinfectar moho en el baño', '2024-10-01', NULL, 2),  
+(19, 4, 'Inspeccionar fugas en la ducha', '2024-10-02', NULL, 1),  
+(20, 2, 'Cambiar cerradura de la puerta principal', '2024-10-03', NULL, 3);  
 
 -- INYECCIÓN DE DATOS EN TABLA RESERVA
 INSERT INTO reserva (idPersonal, idHabitacion, idCliente, fechaEntrada, fechaSalida) VALUES
