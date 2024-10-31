@@ -95,12 +95,23 @@ class SistemaUsuarios:
             pickle.dump(acceso, file)
         print(f"Se registró el acceso exitoso de {username} en 'accesos.ispc'.")
 
+    # @staticmethod
+    # def registrar_acceso_fallido(username, password):
+    #     fecha_actual = datetime.now()
+    #     with open(SistemaUsuarios.FILE_NAME_LOGS, 'a') as log_file:
+    #         log_file.write(f"[{fecha_actual}] Intento fallido de acceso - Usuario: {username}, Clave: {password}\n")
+    #     print(f"Se registró el intento fallido de {username} en 'logs.txt'. ")
+
     @staticmethod
     def registrar_acceso_fallido(username, password):
         fecha_actual = datetime.now()
-        with open(SistemaUsuarios.FILE_NAME_LOGS, 'a') as log_file:
-            log_file.write(f"[{fecha_actual}] Intento fallido de acceso - Usuario: {username}, Clave: {password}\n")
-        print(f"Se registró el intento fallido de {username} en 'logs.txt'. ")
+        try:
+            with open(SistemaUsuarios.FILE_NAME_LOGS, 'a') as log_file:
+                log_file.write(f"[{fecha_actual}] Intento fallido de acceso - Usuario: {username}, Clave: {password}\n")
+            print(f"Se registró el intento fallido de {username} en 'logs.txt'. ")
+        except IOError as e:
+            print(f"Error al escribir en el archivo de log: {e}")
+
 
     @staticmethod
     def cargar_y_mostrar_accesos():

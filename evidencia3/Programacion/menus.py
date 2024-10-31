@@ -54,17 +54,41 @@ def menu_usuarios():
             new_email = input("Nuevo email (dejar vacío para no modificar): ")
             if new_email:
                 new_data['email'] = new_email
+            new_dni = input("Nuevo DNI (dejar vacío para no modificar): ")    
+            if new_dni:
+                new_data['dni'] = new_dni
             SistemaUsuarios.modificar_usuario(username, new_data)
         elif opcion == '3':
             username_or_email = input("Ingresa el username o email del usuario a eliminar: ")
             SistemaUsuarios.eliminar_usuario(username_or_email)
         elif opcion == '4':
-            username_or_email = input("Ingresa el username o email del usuario a buscar: ")
-            usuario = SistemaUsuarios.buscar_usuario(username_or_email)
-            if usuario:
-                print(usuario)
+            print("\n--- Menú de Búsqueda de Usuarios ---")
+            print("1) Buscar por Username")
+            print("2) Buscar por DNI (búsqueda binaria)")
+            print("3) Buscar por Email (búsqueda secuencial)")
+            opcion = input("Seleccione una opción: ")
+
+            if opcion == "1":
+                # SistemaUsuarios.buscar_por_username()
+                SistemaUsuarios.busqueda_secuencial_por_username
+            elif opcion == "2":
+                # SistemaUsuarios.buscar_por_dni()
+                    dni_buscar = input("Ingrese el DNI a buscar: ")
+                    usuarios = SistemaUsuarios.cargar_usuarios()  # El CRUD garantiza que está ordenado por DNI
+                    SistemaUsuarios.busqueda_binaria_por_dni(usuarios,dni_buscar)
+            elif opcion == "3":
+                # SistemaUsuarios.buscar_por_email()
+                SistemaUsuarios.busqueda_secuencial_por_email()
             else:
-                print("Usuario no encontrado.")
+                print("Opción no válida. Intente nuevamente.")
+
+            # username_or_email_or_DNI = input("Ingresa el username o email o DNI del usuario a buscar: ")
+            # usuario = SistemaUsuarios.buscar_usuario(username_or_email_or_DNI )
+            # if usuario:
+            #     print(usuario)
+            # else:
+            #     print("Usuario no encontrado.")
+
         elif opcion == '5':
             SistemaUsuarios.mostrar_usuarios()
         elif opcion == '6':
