@@ -7,7 +7,8 @@ class RegistrosPluviales:
     @staticmethod
     def obtener_ruta_archivo_csv(anio):
         directorio = os.path.dirname(__file__)
-        ruta_completa = os.path.join(directorio, f"registroPluvial{anio}.csv")
+        ruta_completa = os.path.join(directorio, "datosAnalizados", f"registroPluvial{anio}.csv")
+        ruta_completa = os.path.abspath(ruta_completa)
         return ruta_completa
 
     @staticmethod
