@@ -9,13 +9,16 @@ class SistemaUsuarios:
     # Obtén el directorio del script actual
     SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-    # Especifica la ruta de la carpeta "Programación" dentro de "Evidencia3"
     PROGRAMACION_DIR = os.path.join(SCRIPT_DIR, '..', 'Programacion')
-
+    BUSQUEDA_BINARIA_DNI_DIR = os.path.join(SCRIPT_DIR, '..', 'búsquedasYordenamientos')
     # Define las rutas para los archivos dentro de la carpeta "Programación"
     FILE_NAME_USUARIOS = os.path.join(PROGRAMACION_DIR, 'usuarios.ispc')
+    FILE_NAME_USUARIOS_Username = os.path.join(PROGRAMACION_DIR, 'usuariosOrdenadosPorUsername.ispc')
     FILE_NAME_ACCESOS = os.path.join(PROGRAMACION_DIR, 'accesos.ispc')
     FILE_NAME_LOGS = os.path.join(PROGRAMACION_DIR, 'logs.txt')
+    fecha_actual = datetime.now()
+    FILE_NAME_LOGS_BUSQUEDA_BINARIA_DNI = os.path.join(BUSQUEDA_BINARIA_DNI_DIR, 'buscandoUsuarioPorDNI-[{fecha_actual}].txt')
+    FILE_NAME_LOGS_BUSQUEDA_BINARIA_USERNAME = os.path.join(BUSQUEDA_BINARIA_DNI_DIR, 'buscandoUsuarioPorUsername-[{fecha_actual}].txt')
     
     usuarios_ordenados = False
     
@@ -170,7 +173,7 @@ class SistemaUsuarios:
         usuarios.sort(key=lambda x: x.username)
         SistemaUsuarios.usuarios_ordenados = True
         print("Usuarios ordenados usando sort() de Python.")
-        SistemaUsuarios.guardar_usuarios(usuarios)
+        SistemaUsuarios.guardar_usuarios_metodo_propio(usuarios)
 
     @staticmethod
     def ordenar_por_burbuja(usuarios):
@@ -181,4 +184,4 @@ class SistemaUsuarios:
                     usuarios[j], usuarios[j + 1] = usuarios[j + 1], usuarios[j]
         SistemaUsuarios.usuarios_ordenados = True
         print("Usuarios ordenados usando Burbuja.")
-        SistemaUsuarios.guardar_usuarios(usuarios)
+        SistemaUsuarios.guardar_usuarios_metodo_propio(usuarios)

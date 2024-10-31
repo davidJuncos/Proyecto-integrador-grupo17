@@ -17,8 +17,7 @@ class SistemaUsuarios:
     FILE_NAME_USUARIOS_Username = os.path.join(PROGRAMACION_DIR, 'usuariosOrdenadosPorUsername.ispc')
     FILE_NAME_ACCESOS = os.path.join(PROGRAMACION_DIR, 'accesos.ispc')
     FILE_NAME_LOGS = os.path.join(PROGRAMACION_DIR, 'logs.txt')
-    # log_filename = 'buscandoUsuarioPorDNI-29-10-2024.txt'
-    # FILE_NAME_LOGS_BUSQUEDA_BINARIA_DNI = os.path.join(BUSQUEDA_BINARIA_DNI_DIR, 'logi.txt')
+   
     fecha_actual = datetime.now()
     FILE_NAME_LOGS_BUSQUEDA_BINARIA_DNI = os.path.join(BUSQUEDA_BINARIA_DNI_DIR, 'buscandoUsuarioPorDNI-[{fecha_actual}].txt')
     FILE_NAME_LOGS_BUSQUEDA_BINARIA_USERNAME = os.path.join(BUSQUEDA_BINARIA_DNI_DIR, 'buscandoUsuarioPorUsername-[{fecha_actual}].txt')
@@ -256,7 +255,7 @@ class SistemaUsuarios:
         usuarios.sort(key=lambda x: x.username)
         SistemaUsuarios.usuarios_ordenados = True
         print("Usuarios ordenados usando sort() de Python.")
-        SistemaUsuarios.guardar_usuarios(usuarios)
+        SistemaUsuarios.guardar_usuarios_metodo_propio(usuarios)
 
     @staticmethod
     def ordenar_por_burbuja(usuarios):
