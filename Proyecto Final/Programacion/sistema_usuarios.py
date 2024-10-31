@@ -6,18 +6,32 @@ import os
 
 class SistemaUsuarios:
     SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+<<<<<<< HEAD
+
+    PROGRAMACION_DIR = os.path.join(SCRIPT_DIR, '..', 'Programacion')
+    BUSQUEDA_BINARIA_DNI_DIR = os.path.join(SCRIPT_DIR, '..', 'búsquedasYordenamientos')
+    # Define las rutas para los archivos dentro de la carpeta "Programación"
+=======
     PROGRAMACION_DIR = os.path.join(SCRIPT_DIR, '..', 'Programacion')
     BUSQUEDA_BINARIA_DNI_DIR = os.path.join(SCRIPT_DIR, '..', 'búsquedasYordenamientos')
 
+>>>>>>> 29fc7b3d381f9c59937a54149387f85c40b09740
     FILE_NAME_USUARIOS = os.path.join(PROGRAMACION_DIR, 'usuarios.ispc')
     FILE_NAME_USUARIOS_Username = os.path.join(PROGRAMACION_DIR, 'usuariosOrdenadosPorUsername.ispc')
     FILE_NAME_ACCESOS = os.path.join(PROGRAMACION_DIR, 'accesos.ispc')
     FILE_NAME_LOGS = os.path.join(PROGRAMACION_DIR, 'logs.txt')
+<<<<<<< HEAD
+    fecha_actual = datetime.now()
+    FILE_NAME_LOGS_BUSQUEDA_BINARIA_DNI = os.path.join(BUSQUEDA_BINARIA_DNI_DIR, 'buscandoUsuarioPorDNI-[{fecha_actual}].txt')
+    FILE_NAME_LOGS_BUSQUEDA_BINARIA_USERNAME = os.path.join(BUSQUEDA_BINARIA_DNI_DIR, 'buscandoUsuarioPorUsername-[{fecha_actual}].txt')
+    
+=======
 
     fecha_actual = datetime.now().strftime('%Y-%m-%d')
     FILE_NAME_LOGS_BUSQUEDA_BINARIA_DNI = os.path.join(BUSQUEDA_BINARIA_DNI_DIR, f'buscandoUsuarioPorDNI-{fecha_actual}.txt')
     FILE_NAME_LOGS_BUSQUEDA_BINARIA_USERNAME = os.path.join(BUSQUEDA_BINARIA_DNI_DIR, f'buscandoUsuarioPorUsername-{fecha_actual}.txt')
 
+>>>>>>> 29fc7b3d381f9c59937a54149387f85c40b09740
     usuarios_ordenados = False
 
     @staticmethod
@@ -142,6 +156,42 @@ class SistemaUsuarios:
         print(f"Se registró el intento fallido de {username} en 'logs.txt'.")
 
     @staticmethod
+<<<<<<< HEAD
+    def cargar_y_mostrar_accesos():
+        """Función para cargar y mostrar el contenido del archivo accesos.ispc"""
+        try:
+            with open(SistemaUsuarios.FILE_NAME_ACCESOS, 'rb') as file:
+                while True:
+                    try:
+                        acceso = pickle.load(file)
+                        print(acceso)
+                    except EOFError:
+                        break
+        except FileNotFoundError:
+            # Crea el archivo si no existe
+            with open(SistemaUsuarios.FILE_NAME_ACCESOS, 'wb') as file:
+                print("El archivo accesos.ispc no existía, se creó uno nuevo.")
+        except Exception as e:
+            print(f"Error al cargar el archivo: {e}")
+    
+    @staticmethod
+    def ordenar_por_python(usuarios):
+        usuarios.sort(key=lambda x: x.username)
+        SistemaUsuarios.usuarios_ordenados = True
+        print("Usuarios ordenados usando sort() de Python.")
+        SistemaUsuarios.guardar_usuarios_metodo_propio(usuarios)
+
+    @staticmethod
+    def ordenar_por_burbuja(usuarios):
+        n = len(usuarios)
+        for i in range(n):
+            for j in range(0, n - i - 1):
+                if usuarios[j].username > usuarios[j + 1].username:
+                    usuarios[j], usuarios[j + 1] = usuarios[j + 1], usuarios[j]
+        SistemaUsuarios.usuarios_ordenados = True
+        print("Usuarios ordenados usando Burbuja.")
+        SistemaUsuarios.guardar_usuarios_metodo_propio(usuarios)
+=======
     def busqueda_binaria(usuarios, clave_busqueda, clave="username"):
         inicio, fin = 0, len(usuarios) - 1
         while inicio <= fin:
@@ -158,3 +208,4 @@ class SistemaUsuarios:
     @staticmethod
     def crear_directorio_logs():
         os.makedirs("búsquedasYordenamientos", exist_ok=True)
+>>>>>>> 29fc7b3d381f9c59937a54149387f85c40b09740
