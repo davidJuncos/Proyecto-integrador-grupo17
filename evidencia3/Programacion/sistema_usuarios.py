@@ -14,6 +14,7 @@ class SistemaUsuarios:
     BUSQUEDA_BINARIA_DNI_DIR = os.path.join(SCRIPT_DIR, '..', 'búsquedasYordenamientos')
     # Define las rutas para los archivos dentro de la carpeta "Programación"
     FILE_NAME_USUARIOS = os.path.join(PROGRAMACION_DIR, 'usuarios.ispc')
+    FILE_NAME_USUARIOS_Username = os.path.join(PROGRAMACION_DIR, 'usuariosOrdenadosPorUsername.ispc')
     FILE_NAME_ACCESOS = os.path.join(PROGRAMACION_DIR, 'accesos.ispc')
     FILE_NAME_LOGS = os.path.join(PROGRAMACION_DIR, 'logs.txt')
     # log_filename = 'buscandoUsuarioPorDNI-29-10-2024.txt'
@@ -47,7 +48,8 @@ class SistemaUsuarios:
     @staticmethod
     def cargar_usuarios_ordenados():
         """Carga los usuarios desde 'usuariosOrdenadosPorUsername.ispc' si existe."""
-        file_path = os.path.join(SistemaUsuarios.PROGRAMACION_DIR, 'usuariosOrdenadosPorUsername.ispc')
+        # file_path = os.path.join(SistemaUsuarios.PROGRAMACION_DIR, 'usuariosOrdenadosPorUsername.ispc')
+        file_path = os.path.join(SistemaUsuarios.FILE_NAME_USUARIOS_Username)
         try:
             with open(file_path, 'rb') as file:
                 return pickle.load(file)
@@ -84,6 +86,9 @@ class SistemaUsuarios:
         with open(SistemaUsuarios.FILE_NAME_USUARIOS, 'wb') as file:
             pickle.dump(usuarios, file)
 
+    def guardar_usuarios_metodo_propio(usuarios):
+        with open(SistemaUsuarios.FILE_NAME_USUARIOS_Username, 'wb') as file:
+            pickle.dump(usuarios, file)
     # @staticmethod
     # def agregar_usuario(usuario):
     #     usuarios = SistemaUsuarios.cargar_usuarios()
@@ -262,7 +267,7 @@ class SistemaUsuarios:
                     usuarios[j], usuarios[j + 1] = usuarios[j + 1], usuarios[j]
         SistemaUsuarios.usuarios_ordenados = True
         print("Usuarios ordenados usando Burbuja.")
-        SistemaUsuarios.guardar_usuarios(usuarios)
+        SistemaUsuarios.guardar_usuarios_metodo_propio(usuarios)
     
     @staticmethod
     def buscar_por_username():
