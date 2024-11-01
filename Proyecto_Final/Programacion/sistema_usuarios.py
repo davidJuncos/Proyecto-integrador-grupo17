@@ -11,15 +11,19 @@ class SistemaUsuarios:
     # Especifica la ruta de la carpeta "Programación" dentro de "Evidencia3"
     PROGRAMACION_DIR = os.path.join(SCRIPT_DIR, '..', 'Programacion')
     BUSQUEDA_BINARIA_DNI_DIR = os.path.join(SCRIPT_DIR, '..', 'búsquedasYordenamientos')
+    BASE_DATOS_DIR = os.path.join(SCRIPT_DIR, '..',"Bd")
     # Define las rutas para los archivos dentro de la carpeta "Programación"
     FILE_NAME_USUARIOS = os.path.join(PROGRAMACION_DIR, 'usuarios.ispc')
     FILE_NAME_USUARIOS_Username = os.path.join(PROGRAMACION_DIR, 'usuariosOrdenadosPorUsername.ispc')
     FILE_NAME_ACCESOS = os.path.join(PROGRAMACION_DIR, 'accesos.ispc')
     FILE_NAME_LOGS = os.path.join(PROGRAMACION_DIR, 'logs.txt')
+    FILE_NAME_LOGS_BASE_DE_DATOS = os.path.join(BASE_DATOS_DIR,"Back_CRUD")
+    
    
     fecha_actual = datetime.now()
     FILE_NAME_LOGS_BUSQUEDA_BINARIA_DNI = os.path.join(BUSQUEDA_BINARIA_DNI_DIR, 'buscandoUsuarioPorDNI-[{fecha_actual}].txt')
     FILE_NAME_LOGS_BUSQUEDA_BINARIA_USERNAME = os.path.join(BUSQUEDA_BINARIA_DNI_DIR, 'buscandoUsuarioPorUsername-[{fecha_actual}].txt')
+    
     
     usuarios_ordenados = False
     
