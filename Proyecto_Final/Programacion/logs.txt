@@ -1,1 +1,12 @@
+<<<<<<< HEAD:Proyecto_Final/Programacion/logs.txt
 [2024-10-31 19:35:00.795753] Intento fallido de acceso - Usuario: a, Clave: a
+=======
+[2024-10-06 14:44:27.903378] Intento fallido de acceso - Usuario: Mateo, Clave: 1
+[2024-10-06 15:01:18.876189] Intento fallido de acceso - Usuario: tomas, Clave: ff
+[2024-10-06 15:30:17.736294] Intento fallido de acceso - Usuario: benjamin, Clave: cuatro
+[2024-10-06 15:31:04.853976] Intento fallido de acceso - Usuario: tomas, Clave: cuatro
+[2024-10-06 18:04:17.686119] Intento fallido de acceso - Usuario: cesia, Clave: 234
+[2024-10-23 16:46:08.733276] Intento fallido de acceso - Usuario: cash, Clave: cash
+[2024-10-23 16:53:51.527390] Intento fallido de acceso - Usuario: indra, Clave: Indra12
+[2024-10-31 01:31:22.734459] Intento fallido de acceso - Usuario: david, Clave: d45699
+>>>>>>> 3551e7d98f076b24f0eaa1b5a644a1c527676160:Proyecto Final/Programacion/logs.txt

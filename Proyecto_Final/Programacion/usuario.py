@@ -8,7 +8,11 @@ class Usuario:
         self.username = username
         self.password = password
         self.email = email
+<<<<<<< HEAD:Proyecto_Final/Programacion/usuario.py
         self._dni = dni 
+=======
+        self.dni= dni
+>>>>>>> 3551e7d98f076b24f0eaa1b5a644a1c527676160:Proyecto Final/Programacion/usuario.py
         self.accesos = []  # Lista para almacenar los accesos del usuario
         
     def get_dni(self):
@@ -16,10 +20,10 @@ class Usuario:
         
 
     def __str__(self):
-        return f"Usuario(ID: {self.user_id}, Username: {self.username}, Email: {self.email})"
+        return f"Usuario(ID: {self.user_id}, Username: {self.username}, Email: {self.email}, dni: {self.dni})"
     
     def __repr__(self):
-        return f"Usuario(username='{self.user_id}', nombre='{self.username}', email='{self.email}')"
+        return f"Usuario(username='{self.user_id}', nombre='{self.username}', email='{self.email}', dni='{self.dni}')"
     
 
 class Acceso:
