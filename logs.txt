@@ -1,0 +1,1 @@
+[2024-10-28 22:09:46.639440] Intento fallido de acceso - Usuario: luca , Clave: 1122

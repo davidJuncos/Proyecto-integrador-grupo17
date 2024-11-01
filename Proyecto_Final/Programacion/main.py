@@ -1,12 +1,15 @@
 # main.py
 from menus import menu_usuarios, menu_graficos
 from registros_pluviales import RegistrosPluviales
+from sistema_usuarios import SistemaUsuarios
+#from BD.Back_CRUD import main1, menu1 
 
 def main():
     registros = None 
     while True:
+        print("¡BIENVENIDO!")
         print("\n--- Menú Principal ---")
-        print("1. Menú de Usuarios")
+        print("1. Usuarios y Accesos de la Aplicación")
         print("2. Cargar Registros Pluviales")
         print("3. Menú de Gráficos")
         print("4. Estadísticas")
@@ -20,7 +23,12 @@ def main():
             registros = RegistrosPluviales.cargar_o_generar_registros(anio)
             mes = int(input("Ingresa el mes para mostrar los registros (1-12): "))
             RegistrosPluviales.mostrar_registros_por_mes(registros, mes)
-        elif opcion == "3":
+       # elif opcion == "3":
+            #SistemaUsuarios.iniciar_sesion() 
+            #menu1()
+            #main1()
+            
+        elif opcion == "88":
             if registros:
                 menu_graficos(registros, mes)
             else:

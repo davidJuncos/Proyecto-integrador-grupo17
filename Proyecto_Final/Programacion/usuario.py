@@ -3,12 +3,17 @@ from datetime import datetime
 
 
 class Usuario:
-    def __init__(self, user_id, username, password, email):
+    def __init__(self, user_id, username, password, email, dni):
         self.user_id = user_id
         self.username = username
         self.password = password
         self.email = email
+        self._dni = dni 
         self.accesos = []  # Lista para almacenar los accesos del usuario
+        
+    def get_dni(self):
+        return self._dni
+        
 
     def __str__(self):
         return f"Usuario(ID: {self.user_id}, Username: {self.username}, Email: {self.email})"
@@ -24,4 +29,5 @@ class Acceso:
 
     def __str__(self):
         return f"Usuario: {self.username}, Fecha de acceso: {self.fecha_acceso}"
+
 
