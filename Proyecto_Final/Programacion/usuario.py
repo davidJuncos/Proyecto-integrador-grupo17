@@ -4,14 +4,13 @@ from datetime import datetime
 
 class Usuario:
     def __init__(self, user_id, username, password, email, dni):
-        self.__user_id = user_id
-        self.__username = username
-        self.__password = password
-        self.__email = email
-        self.__dni= dni
+        self.user_id = user_id
+        self.username = username
+        self.password = password
+        self.email = email
+        self.dni= dni
         self.accesos = []  # Lista para almacenar los accesos del usuario
-        
-    
+
     def get_user_id(self):
         return self.__user_id
 
@@ -47,6 +46,8 @@ class Usuario:
         return f"Usuario(username='{self.user_id}', nombre='{self.username}', email='{self.email}', dni='{self.dni}')"
     
 
+    
+
 class Acceso:
     def __init__(self, username):
         self.username = username
@@ -61,5 +62,3 @@ class Acceso:
 
     def __str__(self):
         return f"Usuario: {self.username}, Fecha de acceso: {self.fecha_acceso}"
-
-

@@ -9,9 +9,8 @@ def main():
     registros = None  # Inicializar variable para almacenar registros pluviales
 
     while True:
-        print("¡BIENVENIDO!")
         print("\n--- Menú Principal ---")
-        print("1. Usuarios y Accesos de la Aplicación")
+        print("1. Menú de Usuarios")
         print("2. Cargar Registros Pluviales")
         print("3. Menú de Gráficos")
         print("4. Salir")
