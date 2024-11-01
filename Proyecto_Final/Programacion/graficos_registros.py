@@ -3,6 +3,15 @@ import matplotlib.pyplot as plt
 class Graficos:
 
     @staticmethod
+    def calcular_estadisticas_mes(registros, mes):
+        precipitaciones_dias = registros[mes - 1]  # Obtiene las precipitaciones del mes seleccionado
+        max_precipitacion = max(precipitaciones_dias)
+        min_precipitacion = min(precipitaciones_dias)
+        promedio_precipitacion = sum(precipitaciones_dias) / len(precipitaciones_dias)
+
+        return max_precipitacion, min_precipitacion, promedio_precipitacion
+    
+    @staticmethod
     def graficar_lluvias_anuales_barra(registros):
         sumas_mensuales = [sum(mes) for mes in registros]
         meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 

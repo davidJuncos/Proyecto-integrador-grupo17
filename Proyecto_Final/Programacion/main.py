@@ -130,9 +130,8 @@ def main():
                     print("Mes no válido. Ingresa un número entre 1 y 12.")
             except ValueError:
                 print("Error: Debes ingresar un número válido para el año y el mes.")
-
             if registros:
-                menu_graficos(registros)
+                menu_graficos(registros, mes)
             else:
                 print("Primero debes cargar los registros pluviales antes de generar gráficos.")
         elif opcion == '3':

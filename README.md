@@ -77,7 +77,7 @@
       https://github.com/davidJuncos
     </td>
     <td>
-      https://github.com/davidJuncos/Personal-ISPC-Evidencia2
+      .
     </td>
    </tr>
   <tr>
@@ -103,27 +103,6 @@
     </td>
     <td>
       .
-    </td>
-   </tr>
-   </th>
-   <tr>
-    <td>
-     Maria Gisela
-    </td>
-    <td>
-    Urzagaste
-    </td>
-    <td>
-     35.932.547
-    </td>
-    <td>
-     ds21tm.urzagaste.maria@gmail.com
-    </td>
-    <td>
-      https://github.com/Mar-Urzag
-    </td>
-    <td>
-     -
     </td>
    </tr>
  </table>

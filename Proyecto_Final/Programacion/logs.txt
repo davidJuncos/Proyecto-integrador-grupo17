@@ -10,6 +10,7 @@
 [2024-10-23 16:53:51.527390] Intento fallido de acceso - Usuario: indra, Clave: Indra12
 [2024-10-31 01:31:22.734459] Intento fallido de acceso - Usuario: david, Clave: d45699
 >>>>>>> 3551e7d98f076b24f0eaa1b5a644a1c527676160:Proyecto Final/Programacion/logs.txt
+<<<<<<< HEAD
 [2024-11-01 19:12:57.180242] Intento fallido de acceso - Usuario: sada, Clave: dasdasd
 [2024-11-01 19:15:14.112145] Intento fallido de acceso - Usuario: a, Clave: a
 [2024-11-01 19:17:03.122887] Intento fallido de acceso - Usuario: lolo, Clave: p
@@ -22,3 +23,12 @@
 [2024-11-01 19:48:27.832168] Intento fallido de acceso - Usuario: 4, Clave: 21
 [2024-11-01 19:49:02.897081] Intento fallido de acceso - Usuario: asdas, Clave: dasd
 [2024-11-01 19:50:50.345522] Intento fallido de acceso - Usuario: dasda, Clave: sadasd
+=======
+[2024-11-01 01:33:15.870415] Intento fallido de acceso - Usuario: pepe, Clave: p1234
+[2024-11-01 16:31:44.204838] Intento fallido de acceso - Usuario: Kira, Clave: kiracroquetas
+[2024-11-01 16:31:58.608541] Intento fallido de acceso - Usuario: Kira, Clave: Kiracroquetas
+[2024-11-01 16:32:27.715965] Intento fallido de acceso - Usuario: Kira, Clave: Kiracroquetas
+[2024-11-01 16:37:10.406686] Intento fallido de acceso - Usuario: Kira, Clave: Kiracroquetas
+[2024-11-01 16:57:40.554403] Intento fallido de acceso - Usuario: Kira, Clave: Kiracroquetas
+[2024-11-01 16:58:16.835704] Intento fallido de acceso - Usuario: Kira, Clave: Kiracroquetas
+>>>>>>> 926f9ab45a898e81d314c527e09faa95bf3df7a9

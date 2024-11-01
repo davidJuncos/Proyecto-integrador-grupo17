@@ -4,13 +4,45 @@ from registros_pluviales import RegistrosPluviales
 from graficos_registros import Graficos
 from usuario import Usuario, Acceso
 
-def menu_graficos(registros):
+# menu.py
+def menu_graficos(registros, mes):
+    while True:
+        print("\n--- Menú de Gráficos ---")
+        print("1. Gráfico de Lluvias Anual por Mes")
+        print("2. Gráfico de Lluvias Diarias por Mes")
+        print("3. Gráfico de Proporción de Lluvias por Mes")
+        print("4. Gráfico de Precipitaciones por Día")
+        print("5. Mostrar Estadísticas del Mes Seleccionado")
+        print("6. Salir")
+        opcion = input("Selecciona una opción:")
+
+        if opcion == "1":
+            Graficos.graficar_lluvias_anuales_barra(registros)
+        elif opcion == "2":
+            Graficos.graficar_dispersión_lluvias_dia_mes(registros)
+        elif opcion == "3":
+            Graficos.graficar_proporción_lluvias_mes(registros)
+        elif opcion == "4":
+            Graficos.graficar_precipitaciones_por_dia(registros, mes)
+        elif opcion == "5":
+            max_precipitacion, min_precipitacion, promedio_precipitacion = Graficos.calcular_estadisticas_mes(registros, mes)
+            print(f"\nEstadísticas de Precipitaciones para el Mes {mes}:")
+            print(f"Máxima precipitación: {max_precipitacion} mm")
+            print(f"Mínima precipitación: {min_precipitacion} mm")
+            print(f"Promedio de precipitación: {promedio_precipitacion:.2f} mm")
+        elif opcion == "6":
+            break
+        else:
+            print("Opción no válida. Intenta nuevamente.")
+
     while True: 
         print("\n--- Menú de Gráficos ---") 
         print("1. Gráfico de Lluvias Anual por Mes")
         print("2. Gráfico de Lluvias Diarias por Mes")
         print("3. Gráfico de Proporción de Lluvias por Mes")
-        print("4. Salir")
+        print("4. Gráfico de Precipitaciones por Día")
+        print("5. Datos Estadísticos")
+        print("6. Salir")
         opcion = input("Selecciona una opción: ")
 
         if opcion == "1":
@@ -20,6 +52,14 @@ def menu_graficos(registros):
         elif opcion == "3":
             Graficos.graficar_proporcion_lluvia_mes(registros)
         elif opcion == "4":
+            Graficos.graficar_precipitaciones_por_dia
+        elif opcion == "5":
+            max_precipitacion, min_precipitacion, promedio_precipitacion = Graficos.calcular_estadisticas_mes(registros, mes)
+            print(f"\nEstadísticas de Precipitaciones para el Mes {mes}:")
+            print(f"Máxima precipitación: {max_precipitacion} mm")
+            print(f"Mínima precipitación: {min_precipitacion} mm")
+            print(f"Promedio de precipitación: {promedio_precipitacion:.2f} mm")
+        elif opcion == "6":
             break
         else: 
             print("Opción no válida")    
@@ -70,9 +110,11 @@ def menu_usuarios():
             sub_opcion = input("Seleccione una opción: ")
 
             if sub_opcion == "1":
+                usuarios = SistemaUsuarios.cargar_usuarios()  # El CRUD garantiza que está ordenado por DNI
                 username = input("Ingresa el username a buscar: ")
-                SistemaUsuarios.busqueda_secuencial_por_username(username)
-            
+                SistemaUsuarios.busqueda_secuencial_por_username( usuarios, username)
+
+
             elif sub_opcion == "2":
                 try:
                     dni_buscar = int(input("Ingrese el DNI a buscar: "))
@@ -82,8 +124,9 @@ def menu_usuarios():
                     print("Error: Ingrese un número válido para el DNI.")
             
             elif sub_opcion == "3":
+                usuarios = SistemaUsuarios.cargar_usuarios()  # El CRUD garantiza que está ordenado por DNI
                 email = input("Ingresa el email a buscar: ")
-                SistemaUsuarios.busqueda_secuencial_por_email(email)
+                SistemaUsuarios.busqueda_secuencial_por_email(usuarios, email)
             
             else:
                 print("Opción no válida. Intente nuevamente.")
@@ -111,7 +154,7 @@ def menu_usuarios():
             SistemaUsuarios.iniciar_sesion()
         
         elif opcion == '9':
-            print("Saliendo del menú de usuarios.")
+            print("Saliendo del Menú de Principal.")
             break
         
         else:
