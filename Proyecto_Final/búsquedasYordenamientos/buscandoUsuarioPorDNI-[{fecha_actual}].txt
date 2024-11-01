@@ -34,3 +34,11 @@ Intento 1: DNI en la posición 7 es 33665987. Buscar en la derecha (posición 8 a 
 Intento 2: DNI en la posición 11 es 50410400. Buscar en la derecha (posición 12 a 14).
 Intento 3: DNI en la posición 13 es 100123987. Buscar en la derecha (posición 14 a 14).
 Intento 4: DNI en la posición 14 es 100234987. Se encontró en 4 intentos.
+[2024-11-01 20:38:59.563058] Búsqueda Binaria por DNI: buscando el DNI 29686787 en 4 usuarios.
+Intento 1: DNI en la posición 1 es 435345. Buscar en la derecha (posición 2 a 3).
+Intento 2: DNI en la posición 2 es 6899786. Buscar en la derecha (posición 3 a 3).
+Intento 3: DNI en la posición 3 es 123123123. Buscar en la izquierda (posición 3 a 2).
+Se realizaron 3 intentos y no se encontró el DNI buscado, no está registrado.
+[2024-11-01 20:49:37.059136] Búsqueda Binaria por DNI: buscando el DNI 6899786 en 4 usuarios.
+Intento 1: DNI en la posición 1 es 435345. Buscar en la derecha (posición 2 a 3).
+Intento 2: DNI en la posición 2 es 6899786. Se encontró en 2 intentos.

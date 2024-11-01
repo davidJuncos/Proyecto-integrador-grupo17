@@ -311,6 +311,7 @@ class SistemaUsuarios:
 
         return None
 
+
     # Crear la carpeta de logs si no existe
     @staticmethod
     def crear_directorio_logs():
@@ -319,10 +320,13 @@ class SistemaUsuarios:
 
     @staticmethod
     def busqueda_binaria_por_dni(usuarios, dni_buscar):
+        """Búsqueda binaria de usuario por DNI, registrando cada intento y resultado en logs."""
+        
         # Asegúrate de que el dni_buscar es un entero
         dni_buscar_int = int(dni_buscar)
         print("Se utilizó la búsqueda por DNI y la técnica de búsqueda fue método binario.")
         
+        # Crear el directorio de logs si no existe
         SistemaUsuarios.crear_directorio_logs()
         
         total_usuarios = len(usuarios)
@@ -330,7 +334,6 @@ class SistemaUsuarios:
 
         try:
             # Abrimos el archivo de log
-            # with open(log_filename, 'a') as log:
             with open(SistemaUsuarios.FILE_NAME_LOGS_BUSQUEDA_BINARIA_DNI, 'a') as log:
                 fecha_actual = datetime.now()
                 log.write(f"[{fecha_actual}] Búsqueda Binaria por DNI: buscando el DNI {dni_buscar} en {total_usuarios} usuarios.\n")
@@ -338,16 +341,19 @@ class SistemaUsuarios:
                 # Verificación de límites
                 if total_usuarios == 0:
                     log.write("No hay usuarios registrados.\n")
+                    print("No hay usuarios registrados.")
                     return None
 
                 primer_dni = int(usuarios[0].dni)
                 ultimo_dni = int(usuarios[-1].dni)
 
                 if dni_buscar_int < primer_dni:
-                    log.write(f"No se encuentra registrado el usuario con ese DNI debido a que el DNI a buscar es más chico que el más chico de los registrados ({primer_dni}).\n")
+                    log.write(f"No se encuentra registrado el usuario con ese DNI debido a que el DNI a buscar es menor que el mínimo registrado ({primer_dni}).\n")
+                    print(f"No se encontró el usuario con DNI {dni_buscar}.")
                     return None
                 elif dni_buscar_int > ultimo_dni:
-                    log.write(f"No se encuentra registrado el usuario con ese DNI debido a que el DNI a buscar es más grande que el más grande de los registrados ({ultimo_dni}).\n")
+                    log.write(f"No se encuentra registrado el usuario con ese DNI debido a que el DNI a buscar es mayor que el máximo registrado ({ultimo_dni}).\n")
+                    print(f"No se encontró el usuario con DNI {dni_buscar}.")
                     return None
 
                 # Lógica de búsqueda binaria
@@ -361,6 +367,7 @@ class SistemaUsuarios:
 
                     if dni_medio == dni_buscar_int:
                         log.write(f"Se encontró en {intentos} intentos.\n")
+                        print(f"Usuario encontrado: {usuarios[medio]}")
                         return usuarios[medio]
                     elif dni_medio < dni_buscar_int:
                         log.write(f"Buscar en la derecha (posición {medio + 1} a {fin}).\n")
@@ -371,6 +378,7 @@ class SistemaUsuarios:
 
                 # Mensaje si no se encuentra el DNI
                 log.write(f"Se realizaron {intentos} intentos y no se encontró el DNI buscado, no está registrado.\n")
+                print(f"No se encontró el usuario con DNI {dni_buscar}.")
         except IOError as e:
             print(f"Error al escribir en el archivo de log: {e}")
 
@@ -416,18 +424,30 @@ class SistemaUsuarios:
 
         for usuario in usuarios:
             intentos += 1
-            print(f"Intento {intentos}: {email_buscar} {'es igual' if usuario.email == email_buscar else 'es distinto'} a {usuario.email}")
+            es_igual = usuario.email == email_buscar
+            comparacion = "igual" if es_igual else "distinto"
+            f"Intento {intentos}: '{email_buscar}' es {comparacion} a '{usuario.email}'"
+              
+            # f"Intento {intentos}: {email_buscar} {'es igual' if usuario.email == email_buscar else 'es distinto'} a {usuario.email}"
 
-            if usuario.email == email_buscar:
+            if es_igual:
+                # Usuario encontrado, mostrar todos los datos
                 print(f"Se encontró en {intentos} intentos.")
+                print("Datos del usuario encontrado:")
+                print(f"Username: {usuario.username}")
+                print(f"Password: {usuario.password}")
+                print(f"DNI: {usuario.dni}")
+                print(f"Email: {usuario.email}")
+
+                # Agrega aquí cualquier otro atributo que tenga la clase Usuario
                 return usuario
 
-        print(f"No se encontró el email '{email_buscar}' en {intentos} intentos.")
+        print(f"No existe el usuario buscado. '{email_buscar}' en {intentos} intentos.")
         return None
 
     @staticmethod
     def busqueda_secuencial_por_username(usuarios, username_buscar):
-        """Búsqueda secuencial por Username mostrando cada intento por pantalla."""
+        """Búsqueda secuencial de usuario por Username, mostrando cada intento y todos los datos del usuario si es encontrado."""
         print(f"Búsqueda Secuencial por Username: buscando '{username_buscar}'")
         intentos = 0
 
@@ -437,13 +457,20 @@ class SistemaUsuarios:
             comparacion = "igual" if es_igual else "distinto"
             
             # Mostrar cada intento y el resultado de la comparación
-            print(f"Intento {intentos}: {username_buscar} es {comparacion} a {usuario.username}")
+            f"Intento {intentos}: '{username_buscar}' es {comparacion} a '{usuario.username}'"
             
             if es_igual:
-                # Usuario encontrado
+                # Usuario encontrado, mostrar todos los datos
                 print(f"Se encontró en {intentos} intentos.")
+                print("Datos del usuario encontrado:")
+                print(f"Username: {usuario.username}")
+                print(f"Password: {usuario.password}")
+                print(f"DNI: {usuario.dni}")
+                print(f"Email: {usuario.email}")
+
+                # Agrega aquí cualquier otro atributo que tenga la clase Usuario
                 return usuario
 
         # Usuario no encontrado después de recorrer la lista completa
-        print(f"No se encontró el username '{username_buscar}' en {intentos} intentos.")
+        print(f"No existe el usuario buscado.'{username_buscar}' en {intentos} intentos.")
         return None
