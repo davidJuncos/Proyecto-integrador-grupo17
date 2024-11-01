@@ -17,3 +17,5 @@ Intento 3: DNI en la posición 6 es 29686788. Se encontró en 3 intentos.
 [2024-10-31 21:25:05.768464] Búsqueda Binaria por DNI: buscando el DNI 39654456 en 12 usuarios.
 Intento 1: DNI en la posición 5 es 29686787. Buscar en la derecha (posición 6 a 11).
 Intento 2: DNI en la posición 8 es 39654456. Se encontró en 2 intentos.
+[2024-11-01 01:20:58.834783] Búsqueda Binaria por DNI: buscando el DNI 12 en 3 usuarios.
+No se encuentra registrado el usuario con ese DNI debido a que el DNI a buscar es más chico que el más chico de los registrados (43545).

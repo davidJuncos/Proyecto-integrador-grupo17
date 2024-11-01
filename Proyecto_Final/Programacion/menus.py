@@ -70,9 +70,11 @@ def menu_usuarios():
             sub_opcion = input("Seleccione una opción: ")
 
             if sub_opcion == "1":
+                usuarios = SistemaUsuarios.cargar_usuarios()  # El CRUD garantiza que está ordenado por DNI
                 username = input("Ingresa el username a buscar: ")
-                SistemaUsuarios.busqueda_secuencial_por_username(username)
-            
+                SistemaUsuarios.busqueda_secuencial_por_username( usuarios, username)
+
+
             elif sub_opcion == "2":
                 try:
                     dni_buscar = int(input("Ingrese el DNI a buscar: "))
@@ -82,8 +84,9 @@ def menu_usuarios():
                     print("Error: Ingrese un número válido para el DNI.")
             
             elif sub_opcion == "3":
+                usuarios = SistemaUsuarios.cargar_usuarios()  # El CRUD garantiza que está ordenado por DNI
                 email = input("Ingresa el email a buscar: ")
-                SistemaUsuarios.busqueda_secuencial_por_email(email)
+                SistemaUsuarios.busqueda_secuencial_por_email(usuarios, email)
             
             else:
                 print("Opción no válida. Intente nuevamente.")
@@ -111,7 +114,7 @@ def menu_usuarios():
             SistemaUsuarios.iniciar_sesion()
         
         elif opcion == '9':
-            print("Saliendo del menú de usuarios.")
+            print("Saliendo del Menú de Principal.")
             break
         
         else:

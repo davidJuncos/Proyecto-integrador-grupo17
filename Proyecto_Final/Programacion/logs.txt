@@ -10,3 +10,4 @@
 [2024-10-23 16:53:51.527390] Intento fallido de acceso - Usuario: indra, Clave: Indra12
 [2024-10-31 01:31:22.734459] Intento fallido de acceso - Usuario: david, Clave: d45699
 >>>>>>> 3551e7d98f076b24f0eaa1b5a644a1c527676160:Proyecto Final/Programacion/logs.txt
+[2024-11-01 01:33:15.870415] Intento fallido de acceso - Usuario: pepe, Clave: p1234
