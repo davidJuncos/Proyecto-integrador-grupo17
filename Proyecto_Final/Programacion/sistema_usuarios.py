@@ -140,12 +140,15 @@ class SistemaUsuarios:
         if usuario:
             if usuario.password == password:
                 print("Inicio de sesión exitoso.")
-                SistemaUsuarios.registrar_acceso_exitoso(username)  # Registrar acceso exitoso
+                SistemaUsuarios.sesion_exitosa = True  # Marca la sesión como exitosa
+                SistemaUsuarios.registrar_acceso_exitoso(username) 
             else:
                 print("Contraseña incorrecta.")
-                SistemaUsuarios.registrar_acceso_fallido(username, password)  # Registrar acceso fallido
+                SistemaUsuarios.sesion_exitosa = False
+                SistemaUsuarios.registrar_acceso_fallido(username, password) # Registrar acceso fallido
         else:
             print("Usuario no encontrado.")
+            SistemaUsuarios.sesion_exitosa = False
             SistemaUsuarios.registrar_acceso_fallido(username, password)  # Registrar acceso fallido
 
     

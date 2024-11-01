@@ -10,3 +10,15 @@
 [2024-10-23 16:53:51.527390] Intento fallido de acceso - Usuario: indra, Clave: Indra12
 [2024-10-31 01:31:22.734459] Intento fallido de acceso - Usuario: david, Clave: d45699
 >>>>>>> 3551e7d98f076b24f0eaa1b5a644a1c527676160:Proyecto Final/Programacion/logs.txt
+[2024-11-01 19:12:57.180242] Intento fallido de acceso - Usuario: sada, Clave: dasdasd
+[2024-11-01 19:15:14.112145] Intento fallido de acceso - Usuario: a, Clave: a
+[2024-11-01 19:17:03.122887] Intento fallido de acceso - Usuario: lolo, Clave: p
+[2024-11-01 19:17:29.032777] Intento fallido de acceso - Usuario: dasld, Clave: sdlasldl
+[2024-11-01 19:24:15.801729] Intento fallido de acceso - Usuario: sadasdasd, Clave: asdasdasdas
+[2024-11-01 19:25:10.537702] Intento fallido de acceso - Usuario: lolo, Clave: p
+[2024-11-01 19:37:21.733293] Intento fallido de acceso - Usuario: S, Clave: S
+[2024-11-01 19:37:27.688953] Intento fallido de acceso - Usuario: SA<D, Clave: SD
+[2024-11-01 19:40:41.847045] Intento fallido de acceso - Usuario: asd, Clave: asdas
+[2024-11-01 19:48:27.832168] Intento fallido de acceso - Usuario: 4, Clave: 21
+[2024-11-01 19:49:02.897081] Intento fallido de acceso - Usuario: asdas, Clave: dasd
+[2024-11-01 19:50:50.345522] Intento fallido de acceso - Usuario: dasda, Clave: sadasd

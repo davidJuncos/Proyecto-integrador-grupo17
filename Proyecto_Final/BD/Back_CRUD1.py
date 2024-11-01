@@ -7,7 +7,8 @@ from reservas import Reserva
 from informes import Informe
 
 def menu1():
-    print("\n--- Sistema de Gestión del Hotel ---")
+    print("\nIngresó a la Gestión de Base de datos de Gestión hotelera")
+    print("--- Sistema de Gestión del Hotel ---")
     print("1. Registrar cliente")
     print("2. Hacer reserva")
     print("3. Consultar disponibilidad")
