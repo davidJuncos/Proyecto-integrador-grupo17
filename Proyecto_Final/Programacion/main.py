@@ -31,17 +31,18 @@ def main():
             menu_usuarios()
         
         elif opcion == "2": 
-            #print("Accediendo al Menú de Base de Datos.")
-            # Accede a Back_CRUD.py como un proceso independiente
             try:
-                # Define la ruta completa a Back_CRUD.py               
+                # Define la ruta completa a Back_CRUD1.py               
                 pathbackcrud = os.path.join(os.path.dirname(__file__), '..', 'BD', 'Back_CRUD1.py')
                 
+                # Ejecuta Back_CRUD1.py como un proceso separado
+                subprocess.run(["python", pathbackcrud], check=True)
+
             except FileNotFoundError as e:
-                print(f"Error: {e}")
-                print("a")
+                print(f"Error: Archivo no encontrado - {e}")
             except Exception as e:
-                print(f"Ocurrió un error al cambiar de directorio: {e}")
+                print(f"Ocurrió un error al intentar ejecutar Back_CRUD1.py: {e}")
+
            #FILE_NAME_LOGS_BASE_DE_DATOS,menu1()
            #FILE_NAME_LOGS_BASE_DE_DATOS,main1()
 
