@@ -5,56 +5,24 @@ import pickle
 import os
 
 class SistemaUsuarios:
+    # Obtén el directorio del script actual
     SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+    # Especifica la ruta de la carpeta "Programación" dentro de "Evidencia3"
     PROGRAMACION_DIR = os.path.join(SCRIPT_DIR, '..', 'Programacion')
     BUSQUEDA_BINARIA_DNI_DIR = os.path.join(SCRIPT_DIR, '..', 'búsquedasYordenamientos')
-<<<<<<< HEAD:Proyecto_Final/Programacion/sistema_usuarios.py
-
-=======
     # Define las rutas para los archivos dentro de la carpeta "Programación"
->>>>>>> 3551e7d98f076b24f0eaa1b5a644a1c527676160:Proyecto Final/Programacion/sistema_usuarios.py
     FILE_NAME_USUARIOS = os.path.join(PROGRAMACION_DIR, 'usuarios.ispc')
     FILE_NAME_USUARIOS_Username = os.path.join(PROGRAMACION_DIR, 'usuariosOrdenadosPorUsername.ispc')
     FILE_NAME_ACCESOS = os.path.join(PROGRAMACION_DIR, 'accesos.ispc')
     FILE_NAME_LOGS = os.path.join(PROGRAMACION_DIR, 'logs.txt')
-<<<<<<< HEAD:Proyecto_Final/Programacion/sistema_usuarios.py
-=======
    
->>>>>>> 3551e7d98f076b24f0eaa1b5a644a1c527676160:Proyecto Final/Programacion/sistema_usuarios.py
     fecha_actual = datetime.now()
     FILE_NAME_LOGS_BUSQUEDA_BINARIA_DNI = os.path.join(BUSQUEDA_BINARIA_DNI_DIR, 'buscandoUsuarioPorDNI-[{fecha_actual}].txt')
     FILE_NAME_LOGS_BUSQUEDA_BINARIA_USERNAME = os.path.join(BUSQUEDA_BINARIA_DNI_DIR, 'buscandoUsuarioPorUsername-[{fecha_actual}].txt')
     
     usuarios_ordenados = False
-
-    @staticmethod
-    def mostrar_usuarios():
-        usuarios_principal = SistemaUsuarios.cargar_usuarios()
-        usuarios_ordenados = SistemaUsuarios.cargar_usuarios_ordenados()
-
-        print("\n--- Usuarios del archivo 'usuarios.ispc' ---")
-        if usuarios_principal:
-            for usuario in usuarios_principal:
-                print(usuario)
-        else:
-            print("No hay usuarios registrados en 'usuarios.ispc'.")
-
-        print("\n--- Usuarios del archivo 'usuariosOrdenadosPorUsername.ispc' ---")
-        if usuarios_ordenados:
-            for usuario in usuarios_ordenados:
-                print(usuario)
-        else:
-            print("No se encontraron usuarios en 'usuariosOrdenadosPorUsername.ispc'.")
-
-    @staticmethod
-    def cargar_usuarios_ordenados():
-        file_path = os.path.join(SistemaUsuarios.PROGRAMACION_DIR, 'usuariosOrdenadosPorUsername.ispc')
-        try:
-            with open(file_path, 'rb') as file:
-                return pickle.load(file)
-        except (FileNotFoundError, EOFError):
-            return []
-
+    
     @staticmethod
     # def mostrar_todos_los_usuarios():
     def mostrar_usuarios():
@@ -96,18 +64,17 @@ class SistemaUsuarios:
                 return pickle.load(file)
         except (FileNotFoundError, EOFError):
             return []
-
+        except Exception as e:
+            print(f"Error al cargar usuarios: {e}")
+            return []
+        
     @staticmethod
     def crear_usuario():
         user_id = int(input("Ingresa el ID del usuario: "))
         username = input("Ingresa el nombre de usuario: ")
         password = input("Ingresa la contraseña: ")
         email = input("Ingresa el email: ")
-<<<<<<< HEAD:Proyecto_Final/Programacion/sistema_usuarios.py
-        dni = int(input("Ingrese el D.N.I:"))
-=======
         dni = input("Ingrese el D.N.I.:")
->>>>>>> 3551e7d98f076b24f0eaa1b5a644a1c527676160:Proyecto Final/Programacion/sistema_usuarios.py
         usuario = Usuario(user_id, username, password, email, dni)
         SistemaUsuarios.agregar_usuario(usuario)
         print(f"Usuario {username} creado y registrado en 'usuarios.ispc'.")
@@ -125,17 +92,12 @@ class SistemaUsuarios:
         """Agrega un nuevo usuario y los ordena por DNI antes de guardar."""
         usuarios = SistemaUsuarios.cargar_usuarios()
         usuarios.append(usuario)
-<<<<<<< HEAD:Proyecto_Final/Programacion/sistema_usuarios.py
-        usuarios.sort(key=lambda u: int(u.get_dni()))
-=======
 
         # Ordenar los usuarios por DNI
         usuarios.sort(key=lambda u: int(u.dni))
 
         # Guardar los usuarios ordenados
->>>>>>> 3551e7d98f076b24f0eaa1b5a644a1c527676160:Proyecto Final/Programacion/sistema_usuarios.py
         SistemaUsuarios.guardar_usuarios(usuarios)
-        print(f"Usuario {usuario.username} agregado y usuarios ordenados por DNI.")
 
         print(f"Usuario {usuario.username} agregado y usuarios ordenados por DNI.")
      
@@ -156,38 +118,52 @@ class SistemaUsuarios:
     @staticmethod
     def eliminar_usuario(username_or_email):
         usuarios = SistemaUsuarios.cargar_usuarios()
-        usuarios = [usuario for usuario in usuarios if usuario.username != username_or_email and usuario.email != username_or_email]
-        SistemaUsuarios.guardar_usuarios(usuarios)
-        print(f"Usuario {username_or_email} eliminado exitosamente." if len(usuarios) else "Usuario no encontrado.")
-
+        usuarios_filtrados = [usuario for usuario in usuarios if usuario.username != username_or_email and usuario.email != username_or_email]
+        if len(usuarios_filtrados) != len(usuarios):
+            SistemaUsuarios.guardar_usuarios(usuarios_filtrados)
+            print(f"Usuario {username_or_email} eliminado exitosamente.")
+        else:
+            print(f"Usuario {username_or_email} no encontrado.")
+    
     @staticmethod
     def iniciar_sesion():
         username = input("Ingresa tu nombre de usuario: ")
         password = input("Ingresa tu contraseña: ")
-        usuario = SistemaUsuarios.buscar_usuario(username)
 
+        # Buscar usuario
+        usuario = SistemaUsuarios.buscar_usuario(username)
+        
         if usuario:
             if usuario.password == password:
                 print("Inicio de sesión exitoso.")
-                SistemaUsuarios.registrar_acceso_exitoso(username)
+                SistemaUsuarios.registrar_acceso_exitoso(username)  # Registrar acceso exitoso
             else:
                 print("Contraseña incorrecta.")
-                SistemaUsuarios.registrar_acceso_fallido(username, password)
+                SistemaUsuarios.registrar_acceso_fallido(username, password)  # Registrar acceso fallido
         else:
             print("Usuario no encontrado.")
-            SistemaUsuarios.registrar_acceso_fallido(username, password)
+            SistemaUsuarios.registrar_acceso_fallido(username, password)  # Registrar acceso fallido
+
+    
+    @staticmethod
+    def busqueda_binaria(usuarios, username):
+        inicio, fin = 0, len(usuarios) - 1
+        while inicio <= fin:
+            medio = (inicio + fin) // 2
+            if usuarios[medio].username == username:
+                return usuarios[medio]
+            elif usuarios[medio].username < username:
+                inicio = medio + 1
+            else:
+                fin = medio - 1
+        return None
 
     @staticmethod
     def buscar_usuario(username_or_email_or_DNI):
         usuarios = SistemaUsuarios.cargar_usuarios()
+
         if SistemaUsuarios.usuarios_ordenados:
             print("Búsqueda realizada por técnica binaria.")
-<<<<<<< HEAD:Proyecto_Final/Programacion/sistema_usuarios.py
-            return SistemaUsuarios.busqueda_binaria(usuarios, username_or_email_or_DNI)
-        else:
-            print("Búsqueda realizada por técnica secuencial.")
-            return next((u for u in usuarios if u.username == username_or_email_or_DNI or u.email == username_or_email_or_DNI or u.dni == username_or_email_or_DNI), None)
-=======
             usuario = SistemaUsuarios.busqueda_binaria(usuarios, username_or_email_or_DNI)
             if usuario:
                 return usuario
@@ -197,7 +173,6 @@ class SistemaUsuarios:
                 if usuario.username == username_or_email_or_DNI or usuario.email == username_or_email_or_DNI or usuario.dni == username_or_email_or_DNI :
                     return usuario
         return None
->>>>>>> 3551e7d98f076b24f0eaa1b5a644a1c527676160:Proyecto Final/Programacion/sistema_usuarios.py
 
     @staticmethod
     def registrar_acceso_exitoso(username):
@@ -208,8 +183,9 @@ class SistemaUsuarios:
 
     @staticmethod
     def registrar_acceso_fallido(username, password):
+        fecha_actual = datetime.now()
         with open(SistemaUsuarios.FILE_NAME_LOGS, 'a') as log_file:
-            log_file.write(f"[{datetime.now()}] Intento fallido de acceso - Usuario: {username}, Clave: {password}\n")
+            log_file.write(f"[{fecha_actual}] Intento fallido de acceso - Usuario: {username}, Clave: {password}\n")
         print(f"Se registró el intento fallido de {username} en 'logs.txt'.")
 
     @staticmethod
@@ -247,8 +223,6 @@ class SistemaUsuarios:
         SistemaUsuarios.usuarios_ordenados = True
         print("Usuarios ordenados usando Burbuja.")
         SistemaUsuarios.guardar_usuarios_metodo_propio(usuarios)
-<<<<<<< HEAD:Proyecto_Final/Programacion/sistema_usuarios.py
-=======
     
     @staticmethod
     def buscar_por_username():
@@ -456,4 +430,3 @@ class SistemaUsuarios:
         # Usuario no encontrado después de recorrer la lista completa
         print(f"No se encontró el username '{username_buscar}' en {intentos} intentos.")
         return None
->>>>>>> 3551e7d98f076b24f0eaa1b5a644a1c527676160:Proyecto Final/Programacion/sistema_usuarios.py

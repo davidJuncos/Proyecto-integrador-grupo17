@@ -2,13 +2,8 @@
 from menus import menu_usuarios, menu_graficos
 from usuario import Usuario, Acceso
 from registros_pluviales import RegistrosPluviales
-<<<<<<< HEAD:Proyecto_Final/Programacion/main.py
-from sistema_usuarios import SistemaUsuarios
-#from BD.Back_CRUD import main1, menu1 
-=======
 import os
 from datetime import datetime
->>>>>>> 3551e7d98f076b24f0eaa1b5a644a1c527676160:Proyecto Final/Programacion/main.py
 
 def main():
     registros = None  # Inicializar variable para almacenar registros pluviales
@@ -26,18 +21,6 @@ def main():
             menu_usuarios()
 
         elif opcion == '2':
-<<<<<<< HEAD:Proyecto_Final/Programacion/main.py
-            anio = int(input("Ingresa el año para cargar registros pluviales: "))
-            registros = RegistrosPluviales.cargar_o_generar_registros(anio)
-            mes = int(input("Ingresa el mes para mostrar los registros (1-12): "))
-            RegistrosPluviales.mostrar_registros_por_mes(registros, mes)
-       # elif opcion == "3":
-            #SistemaUsuarios.iniciar_sesion() 
-            #menu1()
-            #main1()
-            
-        elif opcion == "88":
-=======
             try:
                 anio = int(input("Ingresa el año para cargar registros pluviales: "))
                 registros = RegistrosPluviales.cargar_o_generar_registros(anio)
@@ -51,7 +34,6 @@ def main():
                 print("Error: Debes ingresar un número válido para el año y el mes.")
 
         elif opcion == '3':
->>>>>>> 3551e7d98f076b24f0eaa1b5a644a1c527676160:Proyecto Final/Programacion/main.py
             if registros:
                 menu_graficos(registros)
             else:
