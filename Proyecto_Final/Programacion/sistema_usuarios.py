@@ -74,15 +74,22 @@ class SistemaUsuarios:
         
     @staticmethod
     def crear_usuario():
-        user_id = int(input("Ingresa el ID del usuario: "))
+        while True:
+            try:
+                user_id = int(input("Ingresa el ID del usuario: "))
+                break  # Sale del bucle si se ingresa un número válido
+            except ValueError:
+                print("Error: El ID debe ser un número. Inténtelo de nuevo.")
+        
         username = input("Ingresa el nombre de usuario: ")
         password = input("Ingresa la contraseña: ")
         email = input("Ingresa el email: ")
         dni = input("Ingrese el D.N.I.:")
+        
         usuario = Usuario(user_id, username, password, email, dni)
         SistemaUsuarios.agregar_usuario(usuario)
         print(f"Usuario {username} creado y registrado en 'usuarios.ispc'.")
-
+        
     @staticmethod
     def guardar_usuarios(usuarios):
         with open(SistemaUsuarios.FILE_NAME_USUARIOS, 'wb') as file:
@@ -104,7 +111,7 @@ class SistemaUsuarios:
         SistemaUsuarios.guardar_usuarios(usuarios)
 
         print(f"Usuario {usuario.username} agregado y usuarios ordenados por DNI.")
-     
+
     @staticmethod
     def modificar_usuario(username, new_data):
         usuarios = SistemaUsuarios.cargar_usuarios()
@@ -134,8 +141,12 @@ class SistemaUsuarios:
         username = input("Ingresa tu nombre de usuario: ")
         password = input("Ingresa tu contraseña: ")
 
+        # Ordenar usuarios por `username`
+        usuarios = SistemaUsuarios.cargar_usuarios()
+        usuarios.sort(key=lambda u: u.username)  # Ordena por `username` antes de la búsqueda binaria
+        SistemaUsuarios.usuarios_ordenados = True
         # Buscar usuario
-        usuario = SistemaUsuarios.buscar_usuario(username)
+        usuario = SistemaUsuarios.busqueda_binaria(usuarios, username)
         
         if usuario:
             if usuario.password == password:
@@ -147,7 +158,6 @@ class SistemaUsuarios:
         else:
             print("Usuario no encontrado.")
             SistemaUsuarios.registrar_acceso_fallido(username, password)  # Registrar acceso fallido
-
     
     @staticmethod
     def busqueda_binaria(usuarios, username):
@@ -249,6 +259,7 @@ class SistemaUsuarios:
         else:
             print("Usuario no encontrado.")
     print("Método de búsqueda binaria.")
+
     @staticmethod
     def buscar_por_dni():
         """Buscar usuario por DNI usando búsqueda binaria."""
@@ -263,6 +274,7 @@ class SistemaUsuarios:
         else:
             print("Usuario no encontrado.")
     print("Método de búsqueda binaria.")
+
     @staticmethod
     def buscar_por_email():
         """Buscar usuario por email usando búsqueda secuencial."""
@@ -277,6 +289,7 @@ class SistemaUsuarios:
         else:
             print("Usuario no encontrado.")
     print("Método de búsqueda secuencial.")
+
     @staticmethod
     def busqueda_binaria(usuarios, clave_busqueda, clave="username"):
         """Realiza una búsqueda binaria en función de la clave dada."""
@@ -295,7 +308,6 @@ class SistemaUsuarios:
 
         return None
 
-   
     # Crear la carpeta de logs si no existe
     @staticmethod
     def crear_directorio_logs():
@@ -305,7 +317,6 @@ class SistemaUsuarios:
     @staticmethod
     def busqueda_binaria_por_dni(usuarios, dni_buscar):
         # Asegúrate de que el dni_buscar es un entero
-         
         dni_buscar_int = int(dni_buscar)
         print("Se utilizó la búsqueda por DNI y la técnica de búsqueda fue método binario.")
         
@@ -366,7 +377,6 @@ class SistemaUsuarios:
     def busqueda_binaria_por_username(usuarios, username_buscar):
         print("Se utilizó la búsqueda por Username y la técnica de búsqueda fue método binario.")
         SistemaUsuarios.crear_directorio_logs()
-      
         total_usuarios = len(usuarios)
 
         inicio, fin = 0, total_usuarios - 1

@@ -10,7 +10,9 @@ def menu_graficos(registros):
         print("1. Gráfico de Lluvias Anual por Mes")
         print("2. Gráfico de Lluvias Diarias por Mes")
         print("3. Gráfico de Proporción de Lluvias por Mes")
-        print("4. Salir")
+        print("4. Gráfico de Precipitaciones por Día")
+        print("5. Datos Estadísticos")
+        print("6. Salir")
         opcion = input("Selecciona una opción: ")
 
         if opcion == "1":
@@ -20,6 +22,14 @@ def menu_graficos(registros):
         elif opcion == "3":
             Graficos.graficar_proporcion_lluvia_mes(registros)
         elif opcion == "4":
+            Graficos.graficar_precipitaciones_por_dia
+        elif opcion == "5":
+            max_precipitacion, min_precipitacion, promedio_precipitacion = Graficos.calcular_estadisticas_mes(registros, mes)
+            print(f"\nEstadísticas de Precipitaciones para el Mes {mes}:")
+            print(f"Máxima precipitación: {max_precipitacion} mm")
+            print(f"Mínima precipitación: {min_precipitacion} mm")
+            print(f"Promedio de precipitación: {promedio_precipitacion:.2f} mm")
+        elif opcion == "6":
             break
         else: 
             print("Opción no válida")    

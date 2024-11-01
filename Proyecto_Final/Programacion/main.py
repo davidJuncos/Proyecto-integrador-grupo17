@@ -32,7 +32,7 @@ def main():
         
         elif opcion == "2": 
             #print("Accediendo al Menú de Base de Datos.")
-             # Accede a Back_CRUD.py como un proceso independiente
+            # Accede a Back_CRUD.py como un proceso independiente
             try:
                 # Define la ruta completa a Back_CRUD.py               
                 pathbackcrud = os.path.join(os.path.dirname(__file__), '..', 'BD', 'Back_CRUD1.py')
