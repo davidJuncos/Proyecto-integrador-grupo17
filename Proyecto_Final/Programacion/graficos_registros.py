@@ -26,7 +26,7 @@ class Graficos:
         plt.show()
     
     @staticmethod
-    def graficar_dispersin_lluvias_dia_mes(registros):
+    def graficar_dispersion_lluvias_dia_mes(registros):
         dias = []
         meses = []
         lluvias_dia = [] 
