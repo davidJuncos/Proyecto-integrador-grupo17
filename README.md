@@ -113,10 +113,9 @@
 # SISTEMA GESTIÓN DE HOTEL
 
 ## DESCRIPCIÓN DE ESTRUCTURA
-- Dentro evidencia1/app tenemos todo lo requirido de la parte de Programación I 
-- Dentro del documento tenemos lo requrido junto con lo pedido de Base de Datos 
-- [Evidencia_1.pdf](https://github.com/davidJuncos/Proyecto-integrador-grupo17/blob/master/evidencia1/_EVIDENCIA%20DE%20APRENDIZAJE%20N%C2%B01.pdf)
-
+- Dentro Proyecto_Final/programacion/main.py tenemos el main general con todo lo requerido
+- Dentro de Proyecto final/Bd/Scripts.sql tenemos el script para hacer funcionar nuestra base de datos con sus inyecciones  
+- Dentro de Proyecto_Final tenemos un documento con la descripcion del proyecto 
 ## DESCRIPCIÓN 
 
 Este sistema de gestión de hotel integraría diversas funciones para facilitar la administración eficiente del establecimiento. Incluiría módulos para la gestión de habitaciones, clientes, reservas y empleados. Con respecto a las habitaciones, permitiría realizar un seguimiento de la disponibilidad, asignación y estado de las mismas. Para los clientes, registraría información personal e historial de reservas. En cuanto a las reservas, facilitaría la gestión de disponibilidad, confirmación, modificaciones y cancelaciones. Además, el sistema administraría datos de los empleados, como horarios y roles. En resumen, un sistema integral que optimiza la operación y la experiencia tanto para los huéspedes como para el personal del hotel.
