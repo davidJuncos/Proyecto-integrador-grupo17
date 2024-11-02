@@ -42,3 +42,6 @@ Se realizaron 3 intentos y no se encontró el DNI buscado, no está registrado.
 [2024-11-01 20:49:37.059136] Búsqueda Binaria por DNI: buscando el DNI 6899786 en 4 usuarios.
 Intento 1: DNI en la posición 1 es 435345. Buscar en la derecha (posición 2 a 3).
 Intento 2: DNI en la posición 2 es 6899786. Se encontró en 2 intentos.
+[2024-11-01 22:38:21.420339] Búsqueda Binaria por DNI: buscando el DNI 100987234 en 5 usuarios.
+Intento 1: DNI en la posición 2 es 6899786. Buscar en la derecha (posición 3 a 4).
+Intento 2: DNI en la posición 3 es 100987234. Se encontró en 2 intentos.
